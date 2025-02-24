@@ -1,0 +1,202 @@
+/* app/scroll-animations.css */
+
+/* Base hidden state for all scroll animations */
+.scroll-hidden {
+    opacity: 0;
+    visibility: hidden;
+  }
+
+  /* Fade in animation */
+  .scroll-fade {
+    animation: fadeIn 0.8s ease forwards;
+    visibility: visible;
+  }
+
+  /* Slide up animation */
+  .scroll-slide-up {
+    animation: slideUp 0.8s ease forwards;
+    visibility: visible;
+  }
+
+  /* Slide down animation */
+  .scroll-slide-down {
+    animation: slideDown 0.8s ease forwards;
+    visibility: visible;
+  }
+
+  /* Slide left animation */
+  .scroll-slide-left {
+    animation: slideLeft 0.8s ease forwards;
+    visibility: visible;
+  }
+
+  /* Slide right animation */
+  .scroll-slide-right {
+    animation: slideRight 0.8s ease forwards;
+    visibility: visible;
+  }
+
+  /* Zoom animation */
+  .scroll-zoom {
+    animation: zoom 0.8s ease forwards;
+    visibility: visible;
+  }
+
+  /* Flip animation */
+  .scroll-flip {
+    animation: flip 0.8s ease forwards;
+    visibility: visible;
+  }
+
+  /* Animation keyframes */
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+
+  @keyframes slideUp {
+    from {
+      opacity: 0;
+      transform: translateY(50px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  @keyframes slideDown {
+    from {
+      opacity: 0;
+      transform: translateY(-50px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  @keyframes slideLeft {
+    from {
+      opacity: 0;
+      transform: translateX(50px);
+    }
+    to {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+
+  @keyframes slideRight {
+    from {
+      opacity: 0;
+      transform: translateX(-50px);
+    }
+    to {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+
+  @keyframes zoom {
+    from {
+      opacity: 0;
+      transform: scale(0.8);
+    }
+    to {
+      opacity: 1;
+      transform: scale(1);
+    }
+  }
+
+  @keyframes flip {
+    from {
+      opacity: 0;
+      transform: perspective(400px) rotateX(90deg);
+    }
+    to {
+      opacity: 1;
+      transform: perspective(400px) rotateX(0);
+    }
+  }
+
+  /* Parallax effect for backgrounds */
+  .parallax-section {
+    position: relative;
+    overflow: hidden;
+  }
+
+  .parallax-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 120%;
+    background-size: cover;
+    background-position: center;
+    transform: translateZ(0);
+    will-change: transform;
+  }
+
+  /* Floating animation for subtle movement */
+  .float-animation {
+    animation: float 6s ease-in-out infinite;
+  }
+
+  @keyframes float {
+    0% {
+      transform: translateY(0px);
+    }
+    50% {
+      transform: translateY(-15px);
+    }
+    100% {
+      transform: translateY(0px);
+    }
+  }
+
+  /* Counter animation */
+  .count-animation {
+    transition: color 0.3s ease;
+  }
+
+  /* Gradient text animation */
+  .gradient-text {
+    background: linear-gradient(90deg, #3B82F6, #8B5CF6, #EC4899);
+    background-size: 200% auto;
+    color: transparent;
+    -webkit-background-clip: text;
+    background-clip: text;
+    animation: gradientText 5s linear infinite;
+  }
+
+  @keyframes gradientText {
+    0% {
+      background-position: 0% center;
+    }
+    100% {
+      background-position: 200% center;
+    }
+  }
+
+  /* Scroll progress indicator */
+  .scroll-progress-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 4px;
+    background: transparent;
+    z-index: 100;
+  }
+
+  .scroll-progress-bar {
+    height: 100%;
+    background: linear-gradient(to right, #3B82F6, #8B5CF6);
+    width: 0%;
+    transition: width 0.1s ease;
+  }

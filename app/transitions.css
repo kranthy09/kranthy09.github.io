@@ -1,0 +1,86 @@
+/* app/transitions.css */
+
+/* Page transition container */
+.page-transition-container {
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
+  }
+
+  /* Exit animation - fade out and move up slightly */
+  .page-transitioning-out {
+    animation: fadeOut 400ms ease forwards;
+  }
+
+  /* Entrance animation - fade in and move up slightly */
+  .page-transitioning-in {
+    animation: fadeIn 600ms ease forwards;
+  }
+
+  @keyframes fadeOut {
+    0% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+    100% {
+      opacity: 0;
+      transform: translateY(-10px);
+    }
+  }
+
+  @keyframes fadeIn {
+    0% {
+      opacity: 0;
+      transform: translateY(10px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  /* Link hover effect for smoother interactions */
+  a {
+    transition: color 0.3s ease, transform 0.2s ease;
+  }
+
+  a:hover {
+    transform: translateY(-2px);
+  }
+
+  /* Navigation link specific transitions */
+  .nav-link {
+    position: relative;
+  }
+
+  .nav-link::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: -4px;
+    left: 0;
+    background-color: currentColor;
+    transition: width 0.3s ease;
+  }
+
+  .nav-link:hover::after {
+    width: 100%;
+  }
+
+  /* Active link animation */
+  .nav-link.active::after {
+    width: 100%;
+  }
+
+  /* Staggered content animation on page load */
+  .stagger-item {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.5s ease, transform 0.5s ease;
+  }
+
+  .stagger-item.visible {
+    opacity: 1;
+    transform: translateY(0);
+  }

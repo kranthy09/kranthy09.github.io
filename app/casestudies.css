@@ -1,0 +1,140 @@
+/* app/casestudies.css */
+
+/* Hide scrollbar but keep functionality */
+.hide-scrollbar {
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
+  }
+
+  .hide-scrollbar::-webkit-scrollbar {
+    display: none;  /* Chrome, Safari, Opera */
+  }
+
+  /* Button hover effect */
+  .hover-float {
+    transition: transform 0.2s ease;
+  }
+
+  .hover-float:hover {
+    transform: translateY(-3px);
+  }
+
+  /* Background gradient animation */
+  .animated-gradient {
+    background-size: 200% 200%;
+    animation: gradient-shift 5s ease infinite;
+  }
+
+  @keyframes gradient-shift {
+    0% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+    100% {
+      background-position: 0% 50%;
+    }
+  }
+
+  /* Card hover effect */
+  .case-study-card {
+    transition: all 0.3s ease;
+  }
+
+  .case-study-card:hover {
+    transform: translateY(-10px) scale(1.01);
+    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+  }
+
+  /* Metrics counter animation */
+  .metric-value {
+    position: relative;
+    display: inline-block;
+  }
+
+  .metric-value::after {
+    content: '';
+    position: absolute;
+    bottom: -3px;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background: currentColor;
+    transform: scaleX(0);
+    transform-origin: right;
+    transition: transform 0.5s ease-out;
+  }
+
+  .metric-value.animated::after {
+    transform: scaleX(1);
+    transform-origin: left;
+  }
+
+  /* Image zoom effect */
+  .image-zoom {
+    transition: transform 3s ease;
+  }
+
+  .image-zoom:hover {
+    transform: scale(1.05);
+  }
+
+  /* Shimmer effect for cards */
+  .shimmer {
+    position: relative;
+    overflow: hidden;
+  }
+
+  .shimmer::after {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: linear-gradient(
+      to right,
+      transparent 0%,
+      rgba(255, 255, 255, 0.1) 50%,
+      transparent 100%
+    );
+    transform: rotate(30deg);
+    animation: shimmer 3s infinite;
+  }
+
+  @keyframes shimmer {
+    0% {
+      transform: translateX(-100%) rotate(30deg);
+    }
+    100% {
+      transform: translateX(100%) rotate(30deg);
+    }
+  }
+
+  /* Category button effect */
+  .category-button {
+    position: relative;
+    z-index: 1;
+    overflow: hidden;
+  }
+
+  .category-button::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: currentColor;
+    opacity: 0.1;
+    z-index: -1;
+    transform: scaleX(0);
+    transform-origin: right;
+    transition: transform 0.3s ease;
+  }
+
+  .category-button:hover::before {
+    transform: scaleX(1);
+    transform-origin: left;
+  }
