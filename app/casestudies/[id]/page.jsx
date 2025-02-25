@@ -1,11 +1,11 @@
-'use client';
+"use client";
 
-import { useEffect, useRef } from 'react';
-import Image from 'next/image';
-import Link from 'next/link';
-import AnimatedSection from '@/app/components/AnimatedSection';
-import AnimatedCounter from '@/app/components/AnimatedCounter';
-import ScrollProgressIndicator from '@/app/components/ScrollProgress';
+import { useEffect, useRef } from "react";
+import Image from "next/image";
+import Link from "next/link";
+import AnimatedSection from "@/app/components/AnimatedSection";
+import AnimatedCounter from "@/app/components/AnimatedCounter";
+import ScrollProgressIndicator from "@/app/components/ScrollProgress";
 
 // This would normally be fetched based on the route parameter
 export default function CaseStudyDetail({ params }) {
@@ -15,50 +15,55 @@ export default function CaseStudyDetail({ params }) {
   // Mock data for a single case study
   const caseStudy = {
     id: 1,
-    category: 'E-commerce',
-    title: 'How FashionBrand increased sales by 73% with micro-influencers',
-    clientName: 'FashionBrand',
-    clientDescription: 'A direct-to-consumer fashion brand specializing in sustainable clothing for young adults.',
-    challenge: 'FashionBrand was struggling to gain traction in a competitive market. Their traditional marketing approaches were not resonating with their target audience, and their customer acquisition costs were too high to be sustainable in the long run.',
+    category: "E-commerce",
+    title: "How FashionBrand increased sales by 73% with micro-influencers",
+    clientName: "FashionBrand",
+    clientDescription:
+      "A direct-to-consumer fashion brand specializing in sustainable clothing for young adults.",
+    challenge:
+      "FashionBrand was struggling to gain traction in a competitive market. Their traditional marketing approaches were not resonating with their target audience, and their customer acquisition costs were too high to be sustainable in the long run.",
     solution: `Our platform helped FashionBrand identify and collaborate with 25 micro-influencers whose audiences closely matched their ideal customer profile. We focused on authentic content creation that highlighted the brand's sustainability mission and unique designs.`,
     approach: [
       {
-        title: 'Audience Analysis',
-        description: `We used data analytics to identify the exact demographic and psychographic profiles of FashionBrand's ideal customers.`
+        title: "Audience Analysis",
+        description: `We used data analytics to identify the exact demographic and psychographic profiles of FashionBrand's ideal customers.`,
       },
       {
-        title: 'Influencer Matching',
-        description: 'Our AI-powered algorithm identified micro-influencers with high engagement rates whose followers matched the target audience.'
+        title: "Influencer Matching",
+        description:
+          "Our AI-powered algorithm identified micro-influencers with high engagement rates whose followers matched the target audience.",
       },
       {
-        title: 'Content Strategy',
-        description: `We developed a content calendar and creative brief that aligned with both the brand's message and each influencer's unique voice.`
+        title: "Content Strategy",
+        description: `We developed a content calendar and creative brief that aligned with both the brand's message and each influencer's unique voice.`,
       },
       {
-        title: 'Performance Tracking',
-        description: 'Custom UTM parameters and promo codes enabled precise attribution and ROI measurement for each influencer.'
-      }
+        title: "Performance Tracking",
+        description:
+          "Custom UTM parameters and promo codes enabled precise attribution and ROI measurement for each influencer.",
+      },
     ],
     results: {
       salesIncrease: 73,
       roi: 387,
       engagement: 152000,
       cac: 42,
-      newFollowers: 28500
+      newFollowers: 28500,
     },
     testimonial: {
-      quote: "Working with this platform transformed our marketing strategy. The micro-influencer approach delivered authentic connections with our audience that traditional advertising simply couldn't match.",
+      quote:
+        "Working with this platform transformed our marketing strategy. The micro-influencer approach delivered authentic connections with our audience that traditional advertising simply couldn't match.",
       author: "Sarah Johnson",
-      title: "Marketing Director, FashionBrand"
+      title: "Marketing Director, FashionBrand",
     },
     image: "/globe.svg",
-    logo: '/casestudies/fashion-logo.svg',
-    color: 'from-pink-500 to-rose-500',
+    logo: "/casestudies/fashion-logo.svg",
+    color: "from-pink-500 to-rose-500",
     gallery: [
-      '/casestudies/fashion-gallery-1.jpg',
-      '/casestudies/fashion-gallery-2.jpg',
-      '/casestudies/fashion-gallery-3.jpg'
-    ]
+      "/casestudies/fashion-gallery-1.jpg",
+      "/casestudies/fashion-gallery-2.jpg",
+      "/casestudies/fashion-gallery-3.jpg",
+    ],
   };
 
   // Parallax scrolling effect for hero section
@@ -68,15 +73,17 @@ export default function CaseStudyDetail({ params }) {
 
       // Only apply parallax in the hero section
       if (window.scrollY < window.innerHeight) {
-        contentRef.current.style.transform = `translateY(${window.scrollY * 0.4}px)`;
+        contentRef.current.style.transform = `translateY(${
+          window.scrollY * 0.4
+        }px)`;
       }
 
       // Track scroll direction for animations
       scrollRef.current = window.scrollY;
     };
 
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
   return (
@@ -93,10 +100,15 @@ export default function CaseStudyDetail({ params }) {
             className="object-cover"
             priority
           />
-          <div className={`absolute inset-0 bg-gradient-to-b ${caseStudy.color} opacity-70`}></div>
+          <div
+            className={`absolute inset-0 bg-gradient-to-b ${caseStudy.color} opacity-70`}
+          ></div>
         </div>
 
-        <div ref={contentRef} className="relative z-10 container mx-auto px-4 h-full flex flex-col justify-center">
+        <div
+          ref={contentRef}
+          className="relative z-10 container mx-auto px-4 h-full flex flex-col justify-center"
+        >
           <AnimatedSection animation="fade" className="mb-6">
             <div className="inline-block bg-white rounded-lg p-4 shadow-lg mb-4">
               <Image
@@ -117,7 +129,9 @@ export default function CaseStudyDetail({ params }) {
               {caseStudy.title}
             </h1>
             <p className="text-xl text-white/90 mb-8 max-w-3xl">
-              Learn how {caseStudy.clientName} partnered with our platform to identify the perfect micro-influencers for their brand, resulting in significant growth and ROI.
+              Learn how {caseStudy.clientName} partnered with our platform to
+              identify the perfect micro-influencers for their brand, resulting
+              in significant growth and ROI.
             </p>
           </AnimatedSection>
 
@@ -125,7 +139,10 @@ export default function CaseStudyDetail({ params }) {
             <div className="grid grid-cols-2 md:grid-cols-4 gap-4 bg-white/10 backdrop-blur-sm rounded-xl p-6 max-w-4xl">
               <div className="text-center text-white">
                 <div className="text-3xl font-bold mb-1">
-                  <AnimatedCounter end={caseStudy.results.salesIncrease} suffix="%" />
+                  <AnimatedCounter
+                    end={caseStudy.results.salesIncrease}
+                    suffix="%"
+                  />
                 </div>
                 <div className="text-sm opacity-80">Sales Increase</div>
               </div>
@@ -137,7 +154,10 @@ export default function CaseStudyDetail({ params }) {
               </div>
               <div className="text-center text-white">
                 <div className="text-3xl font-bold mb-1">
-                  <AnimatedCounter end={caseStudy.results.engagement / 1000} suffix="K" />
+                  <AnimatedCounter
+                    end={caseStudy.results.engagement / 1000}
+                    suffix="K"
+                  />
                 </div>
                 <div className="text-sm opacity-80">Engagements</div>
               </div>
@@ -152,7 +172,11 @@ export default function CaseStudyDetail({ params }) {
         </div>
 
         <div className="absolute bottom-0 left-0 right-0">
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320" className="w-full h-auto">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 1440 320"
+            className="w-full h-auto"
+          >
             <path
               fill="#ffffff"
               fillOpacity="1"
@@ -204,7 +228,8 @@ export default function CaseStudyDetail({ params }) {
                 <h2 className="text-2xl font-bold">Our Approach</h2>
               </div>
               <p className="text-gray-600 mb-10">
-                We implemented a comprehensive strategy to help {caseStudy.clientName} leverage micro-influencers effectively.
+                We implemented a comprehensive strategy to help{" "}
+                {caseStudy.clientName} leverage micro-influencers effectively.
               </p>
             </AnimatedSection>
 
@@ -217,11 +242,15 @@ export default function CaseStudyDetail({ params }) {
                   className="bg-white p-6 rounded-xl shadow-md"
                 >
                   <div className="flex items-start">
-                    <div className={`flex-shrink-0 flex items-center justify-center h-10 w-10 rounded-full bg-gradient-to-r ${caseStudy.color} text-white font-bold mr-4`}>
+                    <div
+                      className={`flex-shrink-0 flex items-center justify-center h-10 w-10 rounded-full bg-gradient-to-r ${caseStudy.color} text-white font-bold mr-4`}
+                    >
                       {index + 1}
                     </div>
                     <div>
-                      <h3 className="text-xl font-semibold mb-2">{step.title}</h3>
+                      <h3 className="text-xl font-semibold mb-2">
+                        {step.title}
+                      </h3>
                       <p className="text-gray-600">{step.description}</p>
                     </div>
                   </div>
@@ -233,65 +262,111 @@ export default function CaseStudyDetail({ params }) {
       </section>
 
       {/* Results Section */}
-      <section className={`py-16 bg-gradient-to-r ${caseStudy.color} text-white`}>
+      <section
+        className={`py-16 bg-gradient-to-r ${caseStudy.color} text-white`}
+      >
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto">
             <AnimatedSection animation="fade" className="text-center mb-12">
               <h2 className="text-3xl font-bold mb-4">Results</h2>
               <p className="text-white/90 max-w-2xl mx-auto">
-                The campaign delivered exceptional results across all key metrics, significantly outperforming the client's expectations.
+                The campaign delivered exceptional results across all key
+                metrics, significantly outperforming the client's expectations.
               </p>
             </AnimatedSection>
 
             <div className="grid grid-cols-2 md:grid-cols-5 gap-6 mb-12">
-              <AnimatedSection animation="zoom" options={{ delay: 0 }} className="bg-white/10 backdrop-blur-sm rounded-xl p-6 text-center">
+              <AnimatedSection
+                animation="zoom"
+                options={{ delay: 0 }}
+                className="bg-white/10 backdrop-blur-sm rounded-xl p-6 text-center"
+              >
                 <div className="text-3xl font-bold mb-1">
-                  <AnimatedCounter end={caseStudy.results.salesIncrease} suffix="%" />
+                  <AnimatedCounter
+                    end={caseStudy.results.salesIncrease}
+                    suffix="%"
+                  />
                 </div>
                 <div className="text-sm opacity-80">Sales Increase</div>
               </AnimatedSection>
 
-              <AnimatedSection animation="zoom" options={{ delay: 100 }} className="bg-white/10 backdrop-blur-sm rounded-xl p-6 text-center">
+              <AnimatedSection
+                animation="zoom"
+                options={{ delay: 100 }}
+                className="bg-white/10 backdrop-blur-sm rounded-xl p-6 text-center"
+              >
                 <div className="text-3xl font-bold mb-1">
                   <AnimatedCounter end={caseStudy.results.roi} suffix="%" />
                 </div>
                 <div className="text-sm opacity-80">ROI</div>
               </AnimatedSection>
 
-              <AnimatedSection animation="zoom" options={{ delay: 200 }} className="bg-white/10 backdrop-blur-sm rounded-xl p-6 text-center">
+              <AnimatedSection
+                animation="zoom"
+                options={{ delay: 200 }}
+                className="bg-white/10 backdrop-blur-sm rounded-xl p-6 text-center"
+              >
                 <div className="text-3xl font-bold mb-1">
-                  <AnimatedCounter end={caseStudy.results.engagement / 1000} suffix="K" />
+                  <AnimatedCounter
+                    end={caseStudy.results.engagement / 1000}
+                    suffix="K"
+                  />
                 </div>
                 <div className="text-sm opacity-80">Engagements</div>
               </AnimatedSection>
 
-              <AnimatedSection animation="zoom" options={{ delay: 300 }} className="bg-white/10 backdrop-blur-sm rounded-xl p-6 text-center">
+              <AnimatedSection
+                animation="zoom"
+                options={{ delay: 300 }}
+                className="bg-white/10 backdrop-blur-sm rounded-xl p-6 text-center"
+              >
                 <div className="text-3xl font-bold mb-1">
                   <AnimatedCounter end={caseStudy.results.cac} suffix="%" />
                 </div>
                 <div className="text-sm opacity-80">Lower CAC</div>
               </AnimatedSection>
 
-              <AnimatedSection animation="zoom" options={{ delay: 400 }} className="bg-white/10 backdrop-blur-sm rounded-xl p-6 text-center">
+              <AnimatedSection
+                animation="zoom"
+                options={{ delay: 400 }}
+                className="bg-white/10 backdrop-blur-sm rounded-xl p-6 text-center"
+              >
                 <div className="text-3xl font-bold mb-1">
-                  <AnimatedCounter end={caseStudy.results.newFollowers / 1000} suffix="K" />
+                  <AnimatedCounter
+                    end={caseStudy.results.newFollowers / 1000}
+                    suffix="K"
+                  />
                 </div>
                 <div className="text-sm opacity-80">New Followers</div>
               </AnimatedSection>
             </div>
 
-            <AnimatedSection animation="fade" options={{ delay: 300 }} className="bg-white/10 backdrop-blur-sm rounded-xl p-8">
+            <AnimatedSection
+              animation="fade"
+              options={{ delay: 300 }}
+              className="bg-white/10 backdrop-blur-sm rounded-xl p-8"
+            >
               <div className="flex flex-col md:flex-row items-center">
                 <div className="flex-shrink-0 mb-4 md:mb-0 md:mr-6">
-                  <svg className="h-12 w-12 text-white opacity-30" fill="currentColor" viewBox="0 0 32 32">
+                  <svg
+                    className="h-12 w-12 text-white opacity-30"
+                    fill="currentColor"
+                    viewBox="0 0 32 32"
+                  >
                     <path d="M10 8v12H0V8h10zm2 0h10v12H12V8z"></path>
                   </svg>
                 </div>
                 <div>
-                  <p className="text-xl italic mb-4">"{caseStudy.testimonial.quote}"</p>
+                  <p className="text-xl italic mb-4">
+                    "{caseStudy.testimonial.quote}"
+                  </p>
                   <div>
-                    <div className="font-semibold">{caseStudy.testimonial.author}</div>
-                    <div className="text-sm opacity-80">{caseStudy.testimonial.title}</div>
+                    <div className="font-semibold">
+                      {caseStudy.testimonial.author}
+                    </div>
+                    <div className="text-sm opacity-80">
+                      {caseStudy.testimonial.title}
+                    </div>
                   </div>
                 </div>
               </div>
@@ -307,7 +382,8 @@ export default function CaseStudyDetail({ params }) {
             <AnimatedSection animation="fade" className="text-center mb-10">
               <h2 className="text-3xl font-bold mb-4">Campaign Gallery</h2>
               <p className="text-gray-600 max-w-2xl mx-auto">
-                A selection of content created during the {caseStudy.clientName} influencer campaign.
+                A selection of content created during the {caseStudy.clientName}{" "}
+                influencer campaign.
               </p>
             </AnimatedSection>
 
@@ -327,7 +403,9 @@ export default function CaseStudyDetail({ params }) {
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                     <div className="absolute bottom-0 left-0 right-0 p-4">
-                      <p className="text-white text-sm">Campaign content {index + 1}</p>
+                      <p className="text-white text-sm">
+                        Campaign content {index + 1}
+                      </p>
                     </div>
                   </div>
                 </AnimatedSection>
@@ -340,11 +418,16 @@ export default function CaseStudyDetail({ params }) {
       {/* CTA Section */}
       <section className="py-16 bg-gray-50">
         <div className="container mx-auto px-4">
-          <AnimatedSection animation="fade" className="max-w-4xl mx-auto text-center">
-            <h2 className="text-3xl font-bold mb-4">Ready to create your success story?</h2>
+          <AnimatedSection
+            animation="fade"
+            className="max-w-4xl mx-auto text-center"
+          >
+            <h2 className="text-3xl font-bold mb-4">
+              Ready to create your success story?
+            </h2>
             <p className="text-gray-600 mb-8">
-              Join the growing list of brands leveraging our platform to connect with the
-              perfect influencers for your unique brand goals.
+              Join the growing list of brands leveraging our platform to connect
+              with the perfect influencers for your unique brand goals.
             </p>
             <div className="flex flex-col sm:flex-row justify-center gap-4">
               <Link
