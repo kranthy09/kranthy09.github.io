@@ -161,7 +161,7 @@ export default function InfluencerPage() {
             <section className="relative min-h-screen overflow-hidden">
                 <div className="absolute inset-0 z-0">
                     <Image
-                        src="/influencer/influencer-hero.jpg"
+                        src="/file.svg"
                         alt="Influencer creating content"
                         fill
                         className="object-cover"
@@ -285,7 +285,7 @@ export default function InfluencerPage() {
 
             {/* Dashboard Preview Section */}
             <ParallaxSection
-                backgroundImage="/influencer/gradient-pattern.jpg"
+                backgroundImage="/globe.svg"
                 speed={0.1}
                 className="py-24"
             >
@@ -295,7 +295,7 @@ export default function InfluencerPage() {
                             <AnimatedSection animation="zoom" options={{ delay: 300 }} className="relative">
                                 <div className="rounded-xl overflow-hidden shadow-2xl">
                                     <Image
-                                        src="/influencer/dashboard-preview.jpg"
+                                        src="/file.svg"
                                         alt="Influencer Analytics Dashboard"
                                         width={800}
                                         height={500}

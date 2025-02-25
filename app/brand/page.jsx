@@ -112,7 +112,7 @@ export default function BrandPage() {
             <section className="relative min-h-screen overflow-hidden" ref={featuresRef}>
                 <div className="absolute inset-0 z-0">
                     <Image
-                        src="/brand/brand-hero.jpg"
+                        src="/globe.svg"
                         alt="Brand Marketing Dashboard"
                         fill
                         className="object-cover"
@@ -233,7 +233,7 @@ export default function BrandPage() {
 
             {/* Dashboard Preview Section */}
             <ParallaxSection
-                backgroundImage="/brand/pattern-bg.jpg"
+                backgroundImage="vercel.svg"
                 speed={0.1}
                 className="py-24"
             >
@@ -287,7 +287,7 @@ export default function BrandPage() {
                             <AnimatedSection animation="zoom" options={{ delay: 300 }} className="relative">
                                 <div className="rounded-xl overflow-hidden shadow-2xl">
                                     <Image
-                                        src="/brand/dashboard-preview.jpg"
+                                        src="/file.svg"
                                         alt="Brand Analytics Dashboard"
                                         width={800}
                                         height={500}

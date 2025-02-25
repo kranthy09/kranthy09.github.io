@@ -22,6 +22,6 @@
       "@/*": ["./*"]
     }
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts"],
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts", "app/components/AnimatedCounter.jsx", "app/components/NavigationProgress.jsx", "app/components/NavItem.jsx", "app/components/PageTransition.jsx", "app/components/ParallaxSection.jsx", "app/components/ScrollProgress.jsx", "app/components/StatisticsSection.jsx", "app/components/UserStaggerAnimation.jsx", "app/components/UseScrollAnimation.jsx", "app/features/page.jsx", "app/influencer/page.jsx", "app/signin/page.jsx", "app/casestudies/page.jsx", "app/brand/page.jsx", "app/about/loading.jsx", "app/about/page.jsx"],
   "exclude": ["node_modules"]
 }

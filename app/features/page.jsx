@@ -5,6 +5,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 import AnimatedSection from '@/app/components/AnimatedSection';
 import ScrollProgressIndicator from '@/app/components/ScrollProgress';
+import ParallaxSection from '../components/ParallaxSection';
 
 export default function FeaturesPage() {
     const [activeTab, setActiveTab] = useState('brands');
@@ -246,6 +247,13 @@ export default function FeaturesPage() {
             </section>
 
             {/* User-Specific Features Section */}
+            <ParallaxSection
+                backgroundImage="vercel.svg"
+                speed={0.1}
+                className="py-24"
+            >
+
+
             <section className="py-24 bg-gray-50">
                 <div className="container mx-auto px-4">
                     <AnimatedSection animation="fade" className="text-center mb-16">
@@ -326,6 +334,7 @@ export default function FeaturesPage() {
                     </AnimatedSection>
                 </div>
             </section>
+            </ParallaxSection>
 
             {/* Platform Comparison */}
             <section className="py-24 bg-white">

@@ -9,10 +9,6 @@ export const metadata = {
 
 export default function CaseStudiesPage() {
     return (
-        <div className="container py-12">
-            <CaseStudiesPageComponent />
-
-            {/* More feature content would go here */}
-        </div>
+        <CaseStudiesPageComponent />
     );
 }
