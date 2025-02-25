@@ -44,7 +44,7 @@ export default function RootLayout({
           </main>
           <footer className="bg-gray-100 py-6">
             <div className="container text-center text-gray-500">
-              <p>© {new Date().getFullYear()} YourBrand. All rights reserved.</p>
+              <p>© {new Date().getFullYear()} Influenceai. All rights reserved.</p>
             </div>
           </footer>
         </div>
