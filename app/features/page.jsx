@@ -180,9 +180,7 @@ export default function FeaturesPage() {
 
   return (
     <>
-      <Suspense>
-        <ScrollProgressIndicator />
-      </Suspense>
+      <ScrollProgressIndicator />
 
       {/* Hero Section */}
       <section className="relative min-h-[80vh] bg-gradient-to-r from-blue-900 to-indigo-900 text-white overflow-hidden flex items-center">
