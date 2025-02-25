@@ -4,6 +4,7 @@ import "./globals.css";
 import NavigationProgressBar from "./components/NavigationProgress";
 import Navigation from "@/app/components/Navigation";
 import PageTransition from "./components/PageTransition";
+import { Suspense } from "react";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -31,11 +32,14 @@ export default function RootLayout({
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
         <NavigationProgressBar />
+
         <div className="min-h-screen flex flex-col">
           <Navigation />
           <main className="flex-grow pt-24">
             <PageTransition>
-              {children}
+              <Suspense>
+                {children}
+              </Suspense>
             </PageTransition>
           </main>
           <footer className="bg-gray-100 py-6">
