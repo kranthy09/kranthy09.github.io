@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import React, { useEffect, useRef, useState } from "react";
 
 const ScrollSection = ({
@@ -109,7 +110,7 @@ const ScrollSection = ({
                 zIndex: items.length - index,
               }}
             >
-              <img
+              <Image
                 src={item.image}
                 alt={item.title}
                 className="object-cover w-full h-full rounded-lg shadow-xl transform transition-transform duration-700 ease-out"
