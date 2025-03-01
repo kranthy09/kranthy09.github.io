@@ -1,6 +1,5 @@
 'use client';
 
-import HeroSection from "@/app/components/HeroSection";
 import CaseStudiesSection from "@/app/components/CaseStudiesSection";
 import {
   BrandAssociationSection,
