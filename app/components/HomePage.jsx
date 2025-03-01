@@ -57,11 +57,7 @@ export const BrandAssociationSection = () => {
 //  Influencer Features Section
 export const InfluencerFeaturesSection = () => {
   return (
-    <ParallaxSection
-      backgroundImage="/bg-inf-3.avif"
-      speed={-0.5}
-      className="py-20"
-    >
+    <ParallaxSection speed={-0.5} className="py-20">
       <div className="container">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
           <AnimatedSection
@@ -149,7 +145,7 @@ export const InfluencerFeaturesSection = () => {
 //  Brand Features Section
 export const BrandFeaturesSection = () => {
   return (
-    <ParallaxSection backgroundImage="/file.svg" speed={0.2} className="py-20">
+    <ParallaxSection speed={0.2} className="py-20">
       <div className="container relative z-10 bg-white/90 rounded-2xl p-12 shadow-xl">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
           <div className="md:order-1">
