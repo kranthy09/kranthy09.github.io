@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { Inter, Montserrat, Outfit } from 'next/font/google';
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import NavProgressComponent from "./components/NavProgressComponent";
@@ -16,6 +17,22 @@ const geistMono = Geist_Mono({
   subsets: ["latin"],
 });
 
+// For headings - modern, tech-focused font
+const headingFont = Outfit({
+  subsets: ['latin'],
+  weight: ['600', '700', '800'],
+  variable: '--font-heading',
+  display: 'swap',
+});
+
+// For body text - clean, readable font
+const bodyFont = Inter({
+  subsets: ['latin'],
+  weight: ['400', '500', '600'],
+  variable: '--font-body',
+  display: 'swap',
+});
+
 export const metadata: Metadata = {
   title: "Influence AI website",
   description: "Social Media Application to connect with influencers and manage campaigns",
@@ -29,7 +46,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        className={`${headingFont.variable} ${bodyFont.variable} antialiased`}
       >
         <NavProgressComponent />
 

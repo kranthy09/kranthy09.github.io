@@ -1,30 +1,34 @@
-'use client';
+"use client";
 
-import { useState } from 'react';
-import Image from 'next/image';
-import Link from 'next/link';
-import AnimatedSection from './AnimatedSection';
-import AnimatedCounter from './AnimatedCounter';
-import ParallaxSection from './ParallaxSection';
-
+import { useState } from "react";
+import Image from "next/image";
+import Link from "next/link";
+import AnimatedSection from "./AnimatedSection";
+import AnimatedCounter from "./AnimatedCounter";
+import ParallaxSection from "./ParallaxSection";
 
 //  Brand Association Section
 export const BrandAssociationSection = () => {
   const brands = [
-    { name: 'Microsoft', logo: '/Apple-Logo.png' },
-    { name: 'Amazon', logo: './file.svg' },
-    { name: 'Google', logo: './globe.svg' },
-    { name: 'Apple', logo: './next.svg' },
-    { name: 'Samsung', logo: './influenceai-logo.svg' },
-    { name: 'Nike', logo: './window.svg' }
+    { name: "Microsoft", logo: "/Apple-Logo.png" },
+    { name: "Amazon", logo: "./file.svg" },
+    { name: "Google", logo: "./globe.svg" },
+    { name: "Apple", logo: "./next.svg" },
+    { name: "Samsung", logo: "./influenceai-logo.svg" },
+    { name: "Nike", logo: "./window.svg" },
   ];
 
   return (
     <section className="py-16 bg-gray-50">
       <div className="container">
         <AnimatedSection animation="fade" className="text-center mb-10">
-          <h2 className="text-2xl font-semibold mb-2">Trusted by Leading Brands</h2>
-          <p className="text-gray-600">Top companies rely on our platform for their influencer marketing campaigns</p>
+          <h2 className="text-2xl font-semibold mb-2">
+            Trusted by Leading Brands
+          </h2>
+          <p className="text-gray-600">
+            Top companies rely on our platform for their influencer marketing
+            campaigns
+          </p>
         </AnimatedSection>
 
         <div className="flex flex-wrap justify-center items-center gap-16">
@@ -53,10 +57,17 @@ export const BrandAssociationSection = () => {
 //  Influencer Features Section
 export const InfluencerFeaturesSection = () => {
   return (
-    <section className="py-20">
+    <ParallaxSection
+      backgroundImage="/bg-inf-3.avif"
+      speed={-0.5}
+      className="py-20"
+    >
       <div className="container">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
-          <AnimatedSection animation="slide-right" className="relative h-96 rounded-lg overflow-hidden shadow-xl">
+          <AnimatedSection
+            animation="slide-right"
+            className="relative h-96 rounded-lg overflow-hidden shadow-xl"
+          >
             <Image
               src="/file.svg"
               alt="Influencer Dashboard"
@@ -69,32 +80,50 @@ export const InfluencerFeaturesSection = () => {
           <div>
             <AnimatedSection animation="fade">
               <span className="text-blue-600 font-medium">For Influencers</span>
-              <h2 className="text-3xl font-bold mt-2 mb-6">Grow your audience and secure brand deals</h2>
+              <h2 className="text-3xl font-bold mt-2 mb-6">
+                Grow your audience and secure brand deals
+              </h2>
             </AnimatedSection>
 
             <div className="space-y-4">
-              <AnimatedSection animation="slide-left" options={{ delay: 100 }} className="feature-point">
+              <AnimatedSection
+                animation="slide-left"
+                options={{ delay: 100 }}
+                className="feature-point"
+              >
                 <FeaturePoint
                   title="Build Your Portfolio"
                   description="Showcase your content and audience metrics to attract top brands."
                 />
               </AnimatedSection>
 
-              <AnimatedSection animation="slide-left" options={{ delay: 200 }} className="feature-point">
+              <AnimatedSection
+                animation="slide-left"
+                options={{ delay: 200 }}
+                className="feature-point"
+              >
                 <FeaturePoint
                   title="Secure Brand Partnerships"
                   description="Get matched with brands that align with your values and audience."
                 />
               </AnimatedSection>
 
-              <AnimatedSection animation="slide-left" options={{ delay: 300 }} className="feature-point">
+              <AnimatedSection
+                animation="slide-left"
+                options={{ delay: 300 }}
+                className="feature-point"
+              >
                 <FeaturePoint
                   title="Track Performance Metrics"
                   description="Monitor campaign performance with detailed analytics and insights."
                 />
               </AnimatedSection>
 
-              <AnimatedSection animation="slide-left" options={{ delay: 400 }} className="feature-point">
+              <AnimatedSection
+                animation="slide-left"
+                options={{ delay: 400 }}
+                className="feature-point"
+              >
                 <FeaturePoint
                   title="Simplify Contract Management"
                   description="Manage agreements, deliverables, and payments through one platform."
@@ -103,56 +132,73 @@ export const InfluencerFeaturesSection = () => {
             </div>
 
             <AnimatedSection animation="fade" options={{ delay: 500 }}>
-              <Link href="/influencer" className="inline-block mt-6 text-blue-600 font-medium hover:text-blue-800 hover:underline">
+              <Link
+                href="/influencer"
+                className="inline-block mt-6 text-blue-600 font-medium hover:text-blue-800 hover:underline"
+              >
                 Learn more about influencer features →
               </Link>
             </AnimatedSection>
           </div>
         </div>
       </div>
-    </section>
+    </ParallaxSection>
   );
 };
 
 //  Brand Features Section
 export const BrandFeaturesSection = () => {
   return (
-    <ParallaxSection
-      backgroundImage="/file.svg"
-      speed={0.2}
-      className="py-20"
-    >
+    <ParallaxSection backgroundImage="/file.svg" speed={0.2} className="py-20">
       <div className="container relative z-10 bg-white/90 rounded-2xl p-12 shadow-xl">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
           <div className="md:order-1">
             <AnimatedSection animation="fade">
               <span className="text-blue-600 font-medium">For Brands</span>
-              <h2 className="text-3xl font-bold mt-2 mb-6">Find the perfect influencers for your campaigns</h2>
+              <h2 className="text-3xl font-bold mt-2 mb-6">
+                Find the perfect influencers for your campaigns
+              </h2>
             </AnimatedSection>
 
             <div className="space-y-4">
-              <AnimatedSection animation="slide-right" options={{ delay: 100 }} className="feature-point">
+              <AnimatedSection
+                animation="slide-right"
+                options={{ delay: 100 }}
+                className="feature-point"
+              >
                 <FeaturePoint
                   title="Advanced Influencer Discovery"
                   description="Filter influencers by audience demographics, engagement rates, and niche."
                 />
               </AnimatedSection>
 
-              <AnimatedSection animation="slide-right" options={{ delay: 200 }} className="feature-point">
+              <AnimatedSection
+                animation="slide-right"
+                options={{ delay: 200 }}
+                className="feature-point"
+              >
                 <FeaturePoint
                   title="Campaign Management Tools"
                   description="Plan, execute, and track multiple campaigns from a single dashboard."
                 />
               </AnimatedSection>
 
-              <AnimatedSection animation="slide-right" options={{ delay: 300 }} className="feature-point">
+              <AnimatedSection
+                animation="slide-right"
+                options={{ delay: 300 }}
+                className="feature-point"
+              >
                 <FeaturePoint
                   title="ROI Analytics"
                   description="Measure campaign performance with comprehensive reporting tools."
                 />
               </AnimatedSection>
 
-              <AnimatedSection animation="slide-right" options={{ delay: 400 }} className="feature-point">
+              <AnimatedSection
+                animation="slide-right"
+                options={{ delay: 400 }}
+                className="feature-point"
+              >
                 <FeaturePoint
                   title="Streamlined Communication"
                   description="Manage influencer relationships through our integrated messaging system."
@@ -161,13 +207,19 @@ export const BrandFeaturesSection = () => {
             </div>
 
             <AnimatedSection animation="fade" options={{ delay: 500 }}>
-              <Link href="/brand" className="inline-block mt-6 text-blue-600 font-medium hover:text-blue-800 hover:underline">
+              <Link
+                href="/brand"
+                className="inline-block mt-6 text-blue-600 font-medium hover:text-blue-800 hover:underline"
+              >
                 Learn more about brand features →
               </Link>
             </AnimatedSection>
           </div>
 
-          <AnimatedSection animation="slide-left" className="md:order-2 relative h-96 rounded-lg overflow-hidden shadow-xl">
+          <AnimatedSection
+            animation="slide-left"
+            className="md:order-2 relative h-96 rounded-lg overflow-hidden shadow-xl"
+          >
             <Image
               src="/file.svg"
               alt="Brand Analytics Dashboard"
@@ -188,12 +240,12 @@ export const MediaGallerySection = () => {
 
   // Sample media data
   const mediaItems = [
-    { type: 'image', src: '/file.svg', alt: 'Marketing Conference 2023' },
-    { type: 'image', src: '/globe.svg', alt: 'Summer Campaign Launch' },
-    { type: 'image', src: '/globe.svg', alt: 'Influencer Meetup' },
-    { type: 'image', src: '/file.svg', alt: 'Fashion Week Collaboration' },
-    { type: 'image', src: '/globe.svg', alt: 'Brand Workshop' },
-    { type: 'image', src: '/file.svg', alt: 'Product Launch Event' },
+    { type: "image", src: "/file.svg", alt: "Marketing Conference 2023" },
+    { type: "image", src: "/globe.svg", alt: "Summer Campaign Launch" },
+    { type: "image", src: "/globe.svg", alt: "Influencer Meetup" },
+    { type: "image", src: "/file.svg", alt: "Fashion Week Collaboration" },
+    { type: "image", src: "/globe.svg", alt: "Brand Workshop" },
+    { type: "image", src: "/file.svg", alt: "Product Launch Event" },
   ];
 
   return (
@@ -202,18 +254,37 @@ export const MediaGallerySection = () => {
         <AnimatedSection animation="fade" className="text-center mb-12">
           <h2 className="text-3xl font-bold mb-4">Photos & Events</h2>
           <p className="text-gray-300 max-w-2xl mx-auto">
-            Explore our events, campaigns, and success stories from our vibrant community of brands and influencers.
+            Explore our events, campaigns, and success stories from our vibrant
+            community of brands and influencers.
           </p>
         </AnimatedSection>
 
-        <AnimatedSection animation="zoom" className="relative overflow-hidden rounded-xl shadow-2xl">
+        <AnimatedSection
+          animation="zoom"
+          className="relative overflow-hidden rounded-xl shadow-2xl"
+        >
           <div className="flex items-center justify-center">
             <button
               className="absolute left-4 z-10 bg-white p-2 rounded-full shadow-md hover:bg-gray-100 transition-all"
-              onClick={() => setActiveIndex((activeIndex - 1 + mediaItems.length) % mediaItems.length)}
+              onClick={() =>
+                setActiveIndex(
+                  (activeIndex - 1 + mediaItems.length) % mediaItems.length
+                )
+              }
             >
-              <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                className="h-6 w-6"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth={2}
+                  d="M15 19l-7-7 7-7"
+                />
               </svg>
             </button>
 
@@ -232,8 +303,12 @@ export const MediaGallerySection = () => {
                         className="object-cover"
                       />
                       <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/90 via-black/60 to-transparent p-8">
-                        <h3 className="text-white text-2xl font-bold">{item.alt}</h3>
-                        <p className="text-gray-300 mt-2">Explore our recent events and campaigns</p>
+                        <h3 className="text-white text-2xl font-bold">
+                          {item.alt}
+                        </h3>
+                        <p className="text-gray-300 mt-2">
+                          Explore our recent events and campaigns
+                        </p>
                       </div>
                     </div>
                   </div>
@@ -243,10 +318,23 @@ export const MediaGallerySection = () => {
 
             <button
               className="absolute right-4 z-10 bg-white p-2 rounded-full shadow-md hover:bg-gray-100 transition-all"
-              onClick={() => setActiveIndex((activeIndex + 1) % mediaItems.length)}
+              onClick={() =>
+                setActiveIndex((activeIndex + 1) % mediaItems.length)
+              }
             >
-              <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                className="h-6 w-6"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth={2}
+                  d="M9 5l7 7-7 7"
+                />
               </svg>
             </button>
           </div>
@@ -255,7 +343,11 @@ export const MediaGallerySection = () => {
             {mediaItems.map((_, index) => (
               <button
                 key={index}
-                className={`h-2 w-10 rounded-full transition-all ${activeIndex === index ? 'bg-blue-600 w-16' : 'bg-gray-500 hover:bg-gray-400'}`}
+                className={`h-2 w-10 rounded-full transition-all ${
+                  activeIndex === index
+                    ? "bg-blue-600 w-16"
+                    : "bg-gray-500 hover:bg-gray-400"
+                }`}
                 onClick={() => setActiveIndex(index)}
               />
             ))}
@@ -272,7 +364,10 @@ export const AboutSection = () => {
     <section className="py-20 bg-gray-50">
       <div className="container">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
-          <AnimatedSection animation="slide-right" className="relative h-96 rounded-lg overflow-hidden shadow-xl">
+          <AnimatedSection
+            animation="slide-right"
+            className="relative h-96 rounded-lg overflow-hidden shadow-xl"
+          >
             <Image
               src="/file.svg"
               alt="Our Team"
@@ -284,24 +379,33 @@ export const AboutSection = () => {
           <div>
             <AnimatedSection animation="fade">
               <span className="text-blue-600 font-medium">About Us</span>
-              <h2 className="text-3xl font-bold mt-2 mb-6">Our Journey and Mission</h2>
+              <h2 className="text-3xl font-bold mt-2 mb-6">
+                Our Journey and Mission
+              </h2>
             </AnimatedSection>
 
             <AnimatedSection animation="slide-left" options={{ delay: 200 }}>
               <p className="text-gray-700 mb-4">
-                Founded in 2020, YourBrand was created to bridge the gap between brands and influencers. We recognized the challenges both sides faced in establishing authentic partnerships that deliver real results.
+                Founded in 2020, YourBrand was created to bridge the gap between
+                brands and influencers. We recognized the challenges both sides
+                faced in establishing authentic partnerships that deliver real
+                results.
               </p>
             </AnimatedSection>
 
             <AnimatedSection animation="slide-left" options={{ delay: 300 }}>
               <p className="text-gray-700 mb-4">
-                Our mission is to create a transparent, efficient, and results-driven marketplace where brands can connect with the right influencers to tell their story authentically.
+                Our mission is to create a transparent, efficient, and
+                results-driven marketplace where brands can connect with the
+                right influencers to tell their story authentically.
               </p>
             </AnimatedSection>
 
             <AnimatedSection animation="slide-left" options={{ delay: 400 }}>
               <p className="text-gray-700 mb-6">
-                With a team of marketing experts, data scientists, and industry veterans, we're constantly innovating to make influencer marketing more effective and measurable.
+                With a team of marketing experts, data scientists, and industry
+                veterans, we're constantly innovating to make influencer
+                marketing more effective and measurable.
               </p>
             </AnimatedSection>
 
@@ -323,7 +427,10 @@ export const AboutSection = () => {
             </AnimatedSection>
 
             <AnimatedSection animation="zoom" options={{ delay: 600 }}>
-              <Link href="/about" className="inline-block px-6 py-3 bg-blue-600 text-white font-medium rounded-lg hover:bg-blue-700 transition-colors shadow-md">
+              <Link
+                href="/about"
+                className="inline-block px-6 py-3 bg-blue-600 text-white font-medium rounded-lg hover:bg-blue-700 transition-colors shadow-md"
+              >
                 Learn More About Us
               </Link>
             </AnimatedSection>
@@ -337,33 +444,33 @@ export const AboutSection = () => {
 //  Contact Form Section
 export const ContactSection = () => {
   const [formData, setFormData] = useState({
-    name: '',
-    email: '',
-    company: '',
-    message: ''
+    name: "",
+    email: "",
+    company: "",
+    message: "",
   });
 
   const handleChange = (e) => {
     const { name, value } = e.target;
-    setFormData(prev => ({
+    setFormData((prev) => ({
       ...prev,
-      [name]: value
+      [name]: value,
     }));
   };
 
   const handleSubmit = (e) => {
     e.preventDefault();
     // Form submission logic would go here
-    console.log('Form submitted:', formData);
+    console.log("Form submitted:", formData);
     // Reset form
     setFormData({
-      name: '',
-      email: '',
-      company: '',
-      message: ''
+      name: "",
+      email: "",
+      company: "",
+      message: "",
     });
     // Show success message
-    alert('Thanks for your message! We\'ll get back to you shortly.');
+    alert("Thanks for your message! We'll get back to you shortly.");
   };
 
   return (
@@ -373,16 +480,22 @@ export const ContactSection = () => {
           <AnimatedSection animation="fade" className="text-center mb-12">
             <h2 className="text-3xl font-bold mb-4">Get in Touch</h2>
             <p className="text-gray-600 max-w-2xl mx-auto">
-              Have questions about our platform? Ready to elevate your influencer marketing strategy?
-              We're here to help.
+              Have questions about our platform? Ready to elevate your
+              influencer marketing strategy? We're here to help.
             </p>
           </AnimatedSection>
 
-          <AnimatedSection animation="slide-up" className="bg-white rounded-xl shadow-xl p-8 md:p-10">
+          <AnimatedSection
+            animation="slide-up"
+            className="bg-white rounded-xl shadow-xl p-8 md:p-10"
+          >
             <form onSubmit={handleSubmit} className="space-y-6">
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                 <div>
-                  <label htmlFor="name" className="block text-gray-700 font-medium mb-2">
+                  <label
+                    htmlFor="name"
+                    className="block text-gray-700 font-medium mb-2"
+                  >
                     Your Name
                   </label>
                   <input
@@ -396,7 +509,10 @@ export const ContactSection = () => {
                   />
                 </div>
                 <div>
-                  <label htmlFor="email" className="block text-gray-700 font-medium mb-2">
+                  <label
+                    htmlFor="email"
+                    className="block text-gray-700 font-medium mb-2"
+                  >
                     Email Address
                   </label>
                   <input
@@ -412,7 +528,10 @@ export const ContactSection = () => {
               </div>
 
               <div>
-                <label htmlFor="company" className="block text-gray-700 font-medium mb-2">
+                <label
+                  htmlFor="company"
+                  className="block text-gray-700 font-medium mb-2"
+                >
                   Company
                 </label>
                 <input
@@ -426,7 +545,10 @@ export const ContactSection = () => {
               </div>
 
               <div>
-                <label htmlFor="message" className="block text-gray-700 font-medium mb-2">
+                <label
+                  htmlFor="message"
+                  className="block text-gray-700 font-medium mb-2"
+                >
                   Your Message
                 </label>
                 <textarea
@@ -462,8 +584,19 @@ const FeaturePoint = ({ title, description }) => (
     <div className="flex items-start">
       <div className="flex-shrink-0 mt-1">
         <div className="flex items-center justify-center h-6 w-6 rounded-full bg-blue-100 text-blue-600">
-          <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            className="h-4 w-4"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke="currentColor"
+          >
+            <path
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              strokeWidth={2}
+              d="M5 13l4 4L19 7"
+            />
           </svg>
         </div>
       </div>

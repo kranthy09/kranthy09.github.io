@@ -13,12 +13,14 @@ import {
 import StatisticsSection from '@/app/components/StatisticsSection';
 import TestimonialCarousel from '@/app/components/Testimonial';
 import ScrollProgressIndicator from '@/app/components/ScrollProgress';
+import HeroHeader from "@/app/components/HeroHeader";
+
 
 export default function Home() {
   return (
     <>
       <ScrollProgressIndicator />
-      <HeroSection />
+      <HeroHeader />
       <BrandAssociationSection />
       <InfluencerFeaturesSection />
       <StatisticsSection />
