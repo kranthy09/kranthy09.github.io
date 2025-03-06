@@ -2,7 +2,8 @@
 
 import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
-import Link from "next/link";
+// import Link from "next/link";
+import ProfileBoxUI from "./dashboardOverview/ProfileBox";
 
 const HeroSection = () => {
   const [titleComplete, setTitleComplete] = useState(false);
@@ -161,7 +162,7 @@ const HeroSection = () => {
                   className="bg-gray-800/60 p-4 rounded-lg"
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
-                  transition={{ delay: 1.0, duration: 0.5 }}
+                  transition={{ delay: 3.0, duration: 0.5 }}
                 >
                   <div className="flex items-center mb-2">
                     <div className="h-2 w-2 bg-green-500 rounded-full mr-2"></div>
@@ -191,7 +192,7 @@ const HeroSection = () => {
                   className="bg-gray-800/60 p-4 rounded-lg"
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
-                  transition={{ delay: 1.1, duration: 0.5 }}
+                  transition={{ delay: 3.1, duration: 0.5 }}
                 >
                   <div className="flex items-center mb-2">
                     <div className="h-2 w-2 bg-blue-500 rounded-full mr-2"></div>
@@ -221,7 +222,7 @@ const HeroSection = () => {
                   className="bg-gray-800/60 p-4 rounded-lg"
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
-                  transition={{ delay: 1.2, duration: 0.5 }}
+                  transition={{ delay: 3.2, duration: 0.5 }}
                 >
                   <div className="flex items-center mb-2">
                     <div className="h-2 w-2 bg-purple-500 rounded-full mr-2"></div>
@@ -255,7 +256,7 @@ const HeroSection = () => {
                   className="bg-gray-800/60 p-4 rounded-lg"
                   initial={{ opacity: 0, scale: 0.95 }}
                   animate={{ opacity: 1, scale: 1 }}
-                  transition={{ delay: 1.3, duration: 0.5 }}
+                  transition={{ delay: 3.3, duration: 0.5 }}
                 >
                   <div className="flex justify-between items-center mb-3">
                     <div className="text-sm font-medium text-gray-200">
@@ -334,7 +335,7 @@ const HeroSection = () => {
                         fill="url(#areaGradient)"
                         initial={{ opacity: 0 }}
                         animate={{ opacity: 1 }}
-                        transition={{ delay: 1.8, duration: 1 }}
+                        transition={{ delay: 4.8, duration: 1 }}
                       />
 
                       {/* Data points */}
@@ -358,7 +359,7 @@ const HeroSection = () => {
                           strokeWidth="2"
                           initial={{ scale: 0, opacity: 0 }}
                           animate={{ scale: 1, opacity: 1 }}
-                          transition={{ delay: 1.5 + i * 0.1, duration: 0.5 }}
+                          transition={{ delay: 3.5 + i * 0.1, duration: 0.5 }}
                         />
                       ))}
                     </svg>
@@ -372,7 +373,7 @@ const HeroSection = () => {
                             initial={{ opacity: 0, y: 10 }}
                             animate={{ opacity: 1, y: 0 }}
                             transition={{
-                              delay: 1.8 + i * 0.05,
+                              delay: 3.8 + i * 0.05,
                               duration: 0.3,
                             }}
                           >
@@ -389,7 +390,7 @@ const HeroSection = () => {
                   className="bg-gray-800/60 p-4 rounded-lg"
                   initial={{ opacity: 0, scale: 0.95 }}
                   animate={{ opacity: 1, scale: 1 }}
-                  transition={{ delay: 1.4, duration: 0.5 }}
+                  transition={{ delay: 3.4, duration: 0.5 }}
                 >
                   <div className="flex justify-between items-center mb-3">
                     <div className="text-sm font-medium text-gray-200">
@@ -414,7 +415,7 @@ const HeroSection = () => {
                         initial={{ strokeDashoffset: 339.292 }}
                         animate={{ strokeDashoffset: 339.292 * 0.35 }}
                         transition={{
-                          delay: 1.6,
+                          delay: 3.6,
                           duration: 1.5,
                           ease: "easeInOut",
                         }}
@@ -433,7 +434,7 @@ const HeroSection = () => {
                         initial={{ strokeDashoffset: 339.292 }}
                         animate={{ strokeDashoffset: 339.292 * 0.7 }}
                         transition={{
-                          delay: 1.7,
+                          delay: 3.7,
                           duration: 1.5,
                           ease: "easeInOut",
                         }}
@@ -452,7 +453,7 @@ const HeroSection = () => {
                         initial={{ strokeDashoffset: 339.292 }}
                         animate={{ strokeDashoffset: 339.292 * 0.85 }}
                         transition={{
-                          delay: 1.8,
+                          delay: 3.8,
                           duration: 1.5,
                           ease: "easeInOut",
                         }}
@@ -467,7 +468,7 @@ const HeroSection = () => {
                         fill="white"
                         initial={{ opacity: 0 }}
                         animate={{ opacity: 1 }}
-                        transition={{ delay: 2.0, duration: 0.5 }}
+                        transition={{ delay: 5.0, duration: 0.5 }}
                       >
                         65%
                       </motion.text>
@@ -478,7 +479,7 @@ const HeroSection = () => {
                       className="ml-4 space-y-2"
                       initial={{ opacity: 0, x: 20 }}
                       animate={{ opacity: 1, x: 0 }}
-                      transition={{ delay: 2.0, duration: 0.5 }}
+                      transition={{ delay: 5.0, duration: 0.5 }}
                     >
                       <div className="flex items-center">
                         <div className="w-3 h-3 bg-blue-500 rounded-full mr-2"></div>

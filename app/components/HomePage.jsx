@@ -6,6 +6,7 @@ import Link from "next/link";
 import AnimatedSection from "./AnimatedSection";
 import AnimatedCounter from "./AnimatedCounter";
 import ParallaxSection from "./ParallaxSection";
+import StatsOverview from "./dashboardOverview/Stats";
 
 //  Brand Association Section
 export const BrandAssociationSection = () => {
@@ -65,12 +66,12 @@ export const InfluencerFeaturesSection = () => {
             className="relative h-96 rounded-lg overflow-hidden shadow-xl"
           >
             <Image
-              src="/file.svg"
-              alt="Influencer Dashboard"
+              src="/globe.svg"
+              alt="Influencer Analytics Dashboard"
               fill
               className="object-cover"
             />
-            <div className="absolute inset-0 bg-gradient-to-tr from-blue-600/40 to-transparent"></div>
+            <div className="absolute inset-0 bg-gradient-to-bl from-red-600/40 to-transparent"></div>
           </AnimatedSection>
 
           <div>
