@@ -18,6 +18,12 @@ export default function InfluenceSearchComponent() {
     <div className="grid w-fit grid-cols-1 gap-6">
       <div className="bg-white rounded-lg shadow overflow-hidden mt-20">
         <div className="flex-1">
+          <div className="md:hidden flex-col">
+            <CampaignCardComponent />
+          </div>
+          <div className="md:hidden flex-col">
+            <MetricsSummaryComponent />
+          </div>
           <div className="relative">
             <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
               <Search size={18} className="text-gray-400" />
@@ -44,10 +50,8 @@ export default function InfluenceSearchComponent() {
             <p className="text-white/80 text-[10px]">@sarahlovesfashion</p>
           </div>
         </div>
+
         <div className="p-4">
-          <div className="absolute ml-40 top-0 left-0">
-            <CampaignCardComponent />
-          </div>
           <div className="flex justify-between mb-3">
             <div>
               <p className="text-[12px] text-gray-500">Fashion & Lifestyle</p>
@@ -71,7 +75,10 @@ export default function InfluenceSearchComponent() {
           <button className="w-full bg-indigo-600 hover:bg-indigo-700 text-white py-2 rounded-md text-[10px]">
             View Profile
           </button>
-          <div className="absolute bottom-0 ml-40">
+          <div className="hidden md:block md:absolute md:top-0 md:right-0">
+            <CampaignCardComponent />
+          </div>
+          <div className="hidden md:block md:absolute md:bottom-0 md:right-40">
             <MetricsSummaryComponent />
           </div>
         </div>
