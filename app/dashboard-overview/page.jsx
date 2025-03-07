@@ -6,7 +6,6 @@
 // import { ChevronRight } from "lucide-react";
 import DashboardHeroSection from "@/app/components/dashboardOverview/DashboardHeroSection";
 import ProfileBoxUI from "@/app/components/dashboardOverview/ProfileBox";
-import FloatingContent from "@/app/components/animations/FloatingContent";
 
 const InfluencerDashboard = () => {
   return (
@@ -14,7 +13,6 @@ const InfluencerDashboard = () => {
       <div className="bg-white">
         <ProfileBoxUI />
         <DashboardHeroSection />
-        <FloatingContent />
       </div>
     </>
   );
