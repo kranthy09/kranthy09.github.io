@@ -1,21 +1,22 @@
-// import FadeIn from "@/app/components/animations/FadeIn";
-// import StatsOverview from "@/app/components/dashboardOverview/Stats";
-// import AudienceGrowthChart from "@/app/components/dashboardOverview/AudienceGrowth";
-// import CampaignPerformance from "@/app/components/dashboardOverview/CampaignPerformance";
+import PortfolioComponent from "../components/dashboardOverview/Portfolio";
+import BrandPartnershipsComponent from "../components/dashboardOverview/BrandPartnerships";
+import TrackMetricsComponent from "../components/dashboardOverview/TrackMetrics";
 
-// import { ChevronRight } from "lucide-react";
-import DashboardHeroSection from "@/app/components/dashboardOverview/DashboardHeroSection";
-import ProfileBoxUI from "@/app/components/dashboardOverview/ProfileBox";
-
-const InfluencerDashboard = () => {
+export default function DashboardOverviewPage() {
   return (
-    <>
-      <div className="bg-white">
-        <ProfileBoxUI />
-        <DashboardHeroSection />
+    <div className="flex">
+      <div className="flex flex-1 static">
+        <div className="flex-1">
+          <PortfolioComponent />
+        </div>
+        <div className="flex-1">
+          <BrandPartnershipsComponent />
+        </div>
       </div>
-    </>
+      {/* <div className="absolute bottom-0">
+        <TrackMetricsComponent />
+      </div> */}
+      <div className="flex-1 bg-black"></div>
+    </div>
   );
-};
-
-export default InfluencerDashboard;
+}

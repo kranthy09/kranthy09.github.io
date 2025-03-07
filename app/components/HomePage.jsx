@@ -6,6 +6,7 @@ import Link from "next/link";
 import AnimatedSection from "./AnimatedSection";
 import AnimatedCounter from "./AnimatedCounter";
 import ParallaxSection from "./ParallaxSection";
+import { image } from "framer-motion/client";
 
 //  Brand Association Section
 export const BrandAssociationSection = () => {
@@ -56,6 +57,23 @@ export const BrandAssociationSection = () => {
 
 //  Influencer Features Section
 export const InfluencerFeaturesSection = () => {
+  const images = [
+    {
+      src: "/dashboard-1.png",
+      alt: "influencer dashboard view",
+      id: "infdsh1",
+    },
+    {
+      src: "/dashboard-2.png",
+      alt: "influencer dashboard view",
+      id: "infdsh2",
+    },
+    {
+      src: "/dashboard-3.png",
+      alt: "influencer dashboard view",
+      id: "infdsh3",
+    },
+  ];
   return (
     <ParallaxSection speed={-0.5} className="py-20">
       <div className="container">
@@ -64,13 +82,17 @@ export const InfluencerFeaturesSection = () => {
             animation="slide-right"
             className="relative h-96 rounded-lg overflow-hidden shadow-xl"
           >
-            <Image
-              src="/globe.svg"
-              alt="Influencer Analytics Dashboard"
-              fill
-              className="object-cover"
-            />
-            <div className="absolute inset-0 bg-gradient-to-bl from-red-600/40 to-transparent"></div>
+            <div className="flex flex-row">
+              <Image
+                src={"/portfolio.png"}
+                alt="portfolio"
+                height={300}
+                width={600}
+                className="object-cover"
+              />
+            </div>
+
+            {/* <div className="absolute inset-0 bg-gradient-to-bl from-red-200/40 to-transparent"></div> */}
           </AnimatedSection>
 
           <div>
