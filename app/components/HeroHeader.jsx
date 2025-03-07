@@ -155,6 +155,19 @@ const HeroSection = () => {
             animate={titleComplete ? "visible" : "hidden"}
             variants={dashboardVariants}
           >
+            {/* Profile Box */}
+            <div className="P-4">
+              <div className="flex items-center gap-4">
+                <motion.div
+                  className="w-fit h-fit"
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ delay: 3.0, duration: 0.5 }}
+                >
+                  <ProfileBoxUI />
+                </motion.div>
+              </div>
+            </div>
             <div className="p-6">
               {/* Dashboard stats with animated counters */}
               <div className="grid grid-cols-2 sm:grid-cols-3 gap-4 mb-6">
@@ -359,7 +372,7 @@ const HeroSection = () => {
                           strokeWidth="2"
                           initial={{ scale: 0, opacity: 0 }}
                           animate={{ scale: 1, opacity: 1 }}
-                          transition={{ delay: 3.5 + i * 0.1, duration: 0.5 }}
+                          transition={{ delay: 3.8 + i * 0.1, duration: 0.5 }}
                         />
                       ))}
                     </svg>

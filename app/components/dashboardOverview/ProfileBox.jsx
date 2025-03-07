@@ -2,46 +2,66 @@ import React from "react";
 import { User, Users, Heart } from "lucide-react";
 import Image from "next/image";
 
+const images = [
+  {
+    src: "/user-posts.svg",
+    alt: "Mountain landscape with lake",
+    id: "img1",
+  },
+  {
+    src: "/user-posts-3.svg",
+    alt: "Portrait of a person smiling",
+    id: "img2",
+  },
+];
+
+const userImage = {
+  src: "/user-pic-1.avif",
+  alt: "User Profile Picture",
+  id: "userimg1",
+};
+
 export default function ProfileBoxUI() {
   return (
-    <div className="w-[350px] h-[200px]">
-      <div className="grid grid-cols-12 gap-1 border rounded-lg p-2 shadow-md">
+    <div className="h-fit bg-gray-800/60">
+      <div className="grid grid-cols-12 gap-1 rounded-lg p-4 mt-10 shadow-md">
         {/* Column 1: User Image */}
-        <div className="col-span-2 flex justify-center items-center">
-          <div className="bg-gray-200 rounded-full w-12 h-12 flex items-center justify-center">
-            <User size={20} className="text-gray-500" />
-          </div>
+        <div className="col-span-2 flex h-[86px]">
+          <Image
+            src={userImage.src}
+            alt={userImage.alt}
+            height={180}
+            width={180}
+            className="object-cover"
+          />
         </div>
 
         {/* Column 2: User Info */}
-        <div className="col-span-4 flex flex-col pr-1">
+        <div className="col-span-4 flex flex-col pl-4">
           {/* Row 1: Name */}
           <div className="mb-1">
-            <h2 className="text-xs font-bold text-gray-800 truncate">
-              Jane Doe
-            </h2>
+            <h2 className="text-xs font-bold text-white truncate">Jane Doe</h2>
           </div>
 
           {/* Row 2: Bio Text */}
           <div className="mb-1">
-            <p className="text-[10px] text-gray-600 line-clamp-2">
-              Product designer and developer specializing in UI/UX. Creating
-              intuitive interfaces.
+            <p className="text-[10px] text-white line-clamp-2">
+              Showing you gems around the world
             </p>
           </div>
 
           {/* Row 3: Stats with icons */}
           <div className="flex flex-col gap-1">
             <div className="flex items-center">
-              <Users className="mr-1 text-blue-500" size={10} />
-              <span className="text-[8px] text-gray-700">
+              <Users className="mr-1 text-white" size={10} />
+              <span className="text-[8px] text-white">
                 <span className="font-semibold">2.4k</span> Followers
               </span>
             </div>
 
             <div className="flex items-center">
               <Heart className="mr-1 text-red-500" size={10} />
-              <span className="text-[8px] text-gray-700">
+              <span className="text-[8px] text-white">
                 <span className="font-semibold">12.5k</span> Engagement
               </span>
             </div>
@@ -49,26 +69,29 @@ export default function ProfileBoxUI() {
         </div>
 
         {/* Column 3: User Posts */}
-        <div className="col-span-2 flex justify-center items-center">
-          <div className="bg-gray-200 w-24 h-24 flex items-center justify-center">
-            <Image src={"./file.svg"} alt="User Post" height={24} width={24} />
-          </div>
-        </div>
-        <div className="col-span-2 flex justify-center items-center">
-          <div className="bg-gray-200 w-24 h-24 flex items-center justify-center">
-            <Image src={"./globe.svg"} alt="User Post" height={24} width={24} />
+        <div className="col-span-4 flex justify-center items-center">
+          <div className="grid grid-cols-2 gap-2 h-[80px]">
+            {images.map((image, index) => (
+              <div key={index} className="overflow-hidden">
+                <Image
+                  src={image.src}
+                  alt={image.alt}
+                  height={90}
+                  width={60}
+                  className="object-cover"
+                />
+              </div>
+            ))}
           </div>
         </div>
 
         {/* Column 4: Audience Demographics */}
-        <div className="col-span-2 border-l pl-1">
+        <div className="col-span-2">
           <div className="space-y-1">
             <div>
               <div className="flex justify-between">
-                <span className="text-[8px] text-gray-600">18-24</span>
-                <span className="text-[8px] font-medium text-gray-700">
-                  38%
-                </span>
+                <span className="text-[8px] text-white">18-24</span>
+                <span className="text-[8px] font-medium text-white">38%</span>
               </div>
               <div className="w-full bg-gray-200 rounded-full h-1">
                 <div
@@ -80,10 +103,8 @@ export default function ProfileBoxUI() {
 
             <div>
               <div className="flex justify-between">
-                <span className="text-[8px] text-gray-600">25-34</span>
-                <span className="text-[8px] font-medium text-gray-700">
-                  45%
-                </span>
+                <span className="text-[8px] text-white">25-34</span>
+                <span className="text-[8px] font-medium text-white">45%</span>
               </div>
               <div className="w-full bg-gray-200 rounded-full h-1">
                 <div
@@ -95,10 +116,8 @@ export default function ProfileBoxUI() {
 
             <div>
               <div className="flex justify-between">
-                <span className="text-[8px] text-gray-600">35-44</span>
-                <span className="text-[8px] font-medium text-gray-700">
-                  12%
-                </span>
+                <span className="text-[8px] text-white">35-44</span>
+                <span className="text-[8px] font-medium text-white">12%</span>
               </div>
               <div className="w-full bg-gray-200 rounded-full h-1">
                 <div
@@ -110,8 +129,8 @@ export default function ProfileBoxUI() {
 
             <div>
               <div className="flex justify-between">
-                <span className="text-[8px] text-gray-600">45+</span>
-                <span className="text-[8px] font-medium text-gray-700">5%</span>
+                <span className="text-[8px] text-white">45+</span>
+                <span className="text-[8px] font-medium text-white">5%</span>
               </div>
               <div className="w-full bg-gray-200 rounded-full h-1">
                 <div

@@ -6,7 +6,6 @@ import Link from "next/link";
 import AnimatedSection from "./AnimatedSection";
 import AnimatedCounter from "./AnimatedCounter";
 import ParallaxSection from "./ParallaxSection";
-import StatsOverview from "./dashboardOverview/Stats";
 
 //  Brand Association Section
 export const BrandAssociationSection = () => {
