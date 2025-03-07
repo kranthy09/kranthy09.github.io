@@ -2,7 +2,7 @@ import { Award } from "lucide-react";
 
 export default function PortfolioComponent() {
   return (
-    <div className="bg-white rounded-lg shadow overflow-hidden">
+    <div className="h-fit bg-white rounded-lg shadow overflow-hidden">
       <div className="p-6">
         <div className="flex justify-between items-center mb-4">
           <h3 className="text-md font-semibold text-gray-800">

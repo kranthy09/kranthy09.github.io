@@ -6,7 +6,8 @@ import Link from "next/link";
 import AnimatedSection from "./AnimatedSection";
 import AnimatedCounter from "./AnimatedCounter";
 import ParallaxSection from "./ParallaxSection";
-import { image } from "framer-motion/client";
+import MobileLayout from "./dashboardOverview/MobileLayout";
+import InfluenceSearchComponent from "./dashboardOverview/InfluencerSearch";
 
 //  Brand Association Section
 export const BrandAssociationSection = () => {
@@ -78,19 +79,8 @@ export const InfluencerFeaturesSection = () => {
     <ParallaxSection speed={-0.5} className="py-20">
       <div className="container">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
-          <AnimatedSection
-            animation="slide-right"
-            className="relative h-96 rounded-lg overflow-hidden shadow-xl"
-          >
-            <div className="flex flex-row">
-              <Image
-                src={"/portfolio.png"}
-                alt="portfolio"
-                height={300}
-                width={600}
-                className="object-cover"
-              />
-            </div>
+          <AnimatedSection animation="slide-right" className="relative h-fit ">
+            <MobileLayout />
 
             {/* <div className="absolute inset-0 bg-gradient-to-bl from-red-200/40 to-transparent"></div> */}
           </AnimatedSection>
@@ -236,15 +226,10 @@ export const BrandFeaturesSection = () => {
 
           <AnimatedSection
             animation="slide-left"
-            className="md:order-2 relative h-96 rounded-lg overflow-hidden shadow-xl"
+            className="md:order-2 rounded-lg"
           >
-            <Image
-              src="/file.svg"
-              alt="Brand Analytics Dashboard"
-              fill
-              className="object-cover"
-            />
-            <div className="absolute inset-0 bg-gradient-to-bl from-purple-600/40 to-transparent"></div>
+            <InfluenceSearchComponent />
+            {/* <div className="absolute inset-0 bg-gradient-to-bl from-purple-600/40 to-transparent"></div> */}
           </AnimatedSection>
         </div>
       </div>
