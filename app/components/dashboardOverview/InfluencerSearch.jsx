@@ -45,6 +45,9 @@ export default function InfluenceSearchComponent() {
           </div>
         </div>
         <div className="p-4">
+          <div className="absolute ml-40 top-0 left-0">
+            <CampaignCardComponent />
+          </div>
           <div className="flex justify-between mb-3">
             <div>
               <p className="text-[12px] text-gray-500">Fashion & Lifestyle</p>
@@ -68,11 +71,8 @@ export default function InfluenceSearchComponent() {
           <button className="w-full bg-indigo-600 hover:bg-indigo-700 text-white py-2 rounded-md text-[10px]">
             View Profile
           </button>
-          <div className="absolute top-0 ml-40">
+          <div className="absolute bottom-0 ml-40">
             <MetricsSummaryComponent />
-          </div>
-          <div className="absolute ml-40 top-60">
-            <CampaignCardComponent />
           </div>
         </div>
       </div>

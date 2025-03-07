@@ -1,7 +1,7 @@
 export default function MetricsSummaryComponent() {
   return (
     <div className="grid grid-cols-2 gap-3 mb-6 w-fit">
-      <div className="bg-white rounded-lg shadow p-4 w-fit">
+      <div className="bg-white rounded-lg shadow p-4 w">
         <p className="text-[10px] text-gray-500 mb-1">Total Spend</p>
         <h3 className="text-[12px] font-semibold text-gray-800">$45,320</h3>
         <p className="text-[8px] text-green-600 mt-1">+12% from last quarter</p>
