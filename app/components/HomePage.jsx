@@ -159,7 +159,7 @@ export const BrandFeaturesSection = () => {
   return (
     <ParallaxSection speed={0.2} className="py-20">
       <div className="container relative z-10 bg-white/90 rounded-2xl p-12 shadow-xl">
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+        <div className="grid grid-cols-1 md:grid-cols-2 items-center">
           <div className="md:order-1">
             <AnimatedSection animation="fade">
               <span className="text-blue-600 font-medium">For Brands</span>
@@ -168,7 +168,7 @@ export const BrandFeaturesSection = () => {
               </h2>
             </AnimatedSection>
 
-            <div className="space-y-4">
+            <div className="space-y-2 mb-0">
               <AnimatedSection
                 animation="slide-right"
                 options={{ delay: 100 }}
@@ -212,24 +212,39 @@ export const BrandFeaturesSection = () => {
                   description="Manage influencer relationships through our integrated messaging system."
                 />
               </AnimatedSection>
-            </div>
-
-            <AnimatedSection animation="fade" options={{ delay: 500 }}>
-              <Link
-                href="/brand"
-                className="inline-block mt-6 text-blue-600 font-medium hover:text-blue-800 hover:underline"
+              <AnimatedSection
+                animation="fade"
+                options={{ delay: 500 }}
+                className="hidden md:block"
               >
-                Learn more about brand features →
-              </Link>
-            </AnimatedSection>
+                <Link
+                  href="/brand"
+                  className="inline-block mt-6 text-blue-600 font-medium hover:text-blue-800 hover:underline"
+                >
+                  Learn more about brand features →
+                </Link>
+              </AnimatedSection>
+            </div>
           </div>
 
           <AnimatedSection
             animation="slide-left"
-            className="md:order-2 rounded-lg"
+            className="md:order-2 rounded-lg mt-0"
           >
             <InfluenceSearchComponent />
             {/* <div className="absolute inset-0 bg-gradient-to-bl from-purple-600/40 to-transparent"></div> */}
+          </AnimatedSection>
+          <AnimatedSection
+            animation="fade"
+            options={{ delay: 500 }}
+            className="block md:hidden"
+          >
+            <Link
+              href="/brand"
+              className="inline-block mt-6 text-blue-600 font-medium hover:text-blue-800 hover:underline"
+            >
+              Learn more about brand features →
+            </Link>
           </AnimatedSection>
         </div>
       </div>

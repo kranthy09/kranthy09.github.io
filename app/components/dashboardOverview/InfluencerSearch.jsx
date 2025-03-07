@@ -75,10 +75,10 @@ export default function InfluenceSearchComponent() {
           <button className="w-full bg-indigo-600 hover:bg-indigo-700 text-white py-2 rounded-md text-[10px]">
             View Profile
           </button>
-          <div className="hidden md:block md:absolute md:top-0 md:right-0">
+          <div className="hidden md:block md:absolute md:top-0 md:right-20">
             <CampaignCardComponent />
           </div>
-          <div className="hidden md:block md:absolute md:bottom-0 md:right-40">
+          <div className="hidden md:block md:absolute md:bottom-0 md:right-20">
             <MetricsSummaryComponent />
           </div>
         </div>
