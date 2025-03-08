@@ -1,10 +1,12 @@
-import PortfolioComponent from "../components/dashboardOverview/Portfolio";
-import BrandPartnershipsComponent from "../components/dashboardOverview/BrandPartnerships";
-import TrackMetricsComponent from "../components/dashboardOverview/TrackMetrics";
-import MobileLayout from "../components/dashboardOverview/MobileLayout";
+// import PortfolioComponent from "../components/dashboardOverview/Portfolio";
+// import BrandPartnershipsComponent from "../components/dashboardOverview/BrandPartnerships";
+// import TrackMetricsComponent from "../components/dashboardOverview/TrackMetrics";
+// import MobileLayout from "../components/dashboardOverview/MobileLayout";
+// import CampaignCardComponent from "@/app/components/dashboardOverview/brand/CampaignCard";
+// import MetricsSummaryComponent from "@/app/components/dashboardOverview/brand/RoiAnalytics";
+
 import InfluenceSearchComponent from "@/app/components/dashboardOverview/InfluencerSearch";
-import CampaignCardComponent from "@/app/components/dashboardOverview/brand/CampaignCard";
-import MetricsSummaryComponent from "@/app/components/dashboardOverview/brand/RoiAnalytics";
+import InfluencerFeatures from "../components/dashboardOverview/influencer/BrandManagement";
 
 export default function DashboardOverviewPage() {
   return (
@@ -26,10 +28,13 @@ export default function DashboardOverviewPage() {
           <MobileLayout />
         </div>
       </div> */}
-      <div className="static">
+      {/* <div className="static">
         <div className="static">
           <InfluenceSearchComponent />
         </div>
+      </div> */}
+      <div className="flex flex-1">
+        <InfluencerFeatures />
       </div>
     </>
   );

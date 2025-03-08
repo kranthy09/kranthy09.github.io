@@ -229,7 +229,194 @@ export const BrandFeaturesSection = () => {
 
           <AnimatedSection
             animation="slide-left"
-            className="md:order-2 rounded-lg mt-0"
+            className="md:order-1 rounded-lg mt-0"
+          >
+            <InfluenceSearchComponent />
+            {/* <div className="absolute inset-0 bg-gradient-to-bl from-purple-600/40 to-transparent"></div> */}
+          </AnimatedSection>
+          <AnimatedSection
+            animation="fade"
+            options={{ delay: 500 }}
+            className="block md:hidden"
+          >
+            <Link
+              href="/brand"
+              className="inline-block mt-6 text-blue-600 font-medium hover:text-blue-800 hover:underline"
+            >
+              Learn more about brand features →
+            </Link>
+          </AnimatedSection>
+        </div>
+      </div>
+    </ParallaxSection>
+  );
+};
+
+export const BrandManagementSection = () => {
+  return (
+    <ParallaxSection speed={0.2} className="py-20">
+      <div className="container relative z-10 bg-white/90 rounded-2xl p-12 shadow-xl">
+        <div className="grid grid-cols-1 md:grid-cols-2 items-center">
+          <div className="order-2">
+            <AnimatedSection animation="fade">
+              <span className="text-blue-600 font-medium">For Influencers</span>
+              <h2 className="text-3xl font-bold mt-2 mb-6">
+                Save time on Brand Management
+              </h2>
+            </AnimatedSection>
+
+            <div className="space-y-2 mb-0">
+              <AnimatedSection
+                animation="slide-right"
+                options={{ delay: 100 }}
+                className="feature-point"
+              >
+                <FeaturePoint
+                  title="Enhance the potential of brand collaboration"
+                  description="Filter influencers by audience demographics, engagement rates, and niche."
+                />
+              </AnimatedSection>
+
+              <AnimatedSection
+                animation="slide-right"
+                options={{ delay: 200 }}
+                className="feature-point"
+              >
+                <FeaturePoint
+                  title="Influence AI offeres smooth workflow with Brands"
+                  description="Plan, execute, and track multiple campaigns from a single dashboard."
+                />
+              </AnimatedSection>
+
+              <AnimatedSection
+                animation="slide-right"
+                options={{ delay: 300 }}
+                className="feature-point"
+              >
+                <FeaturePoint
+                  title="More Collaboration with less time"
+                  description="Measure campaign performance with comprehensive reporting tools."
+                />
+              </AnimatedSection>
+
+              <AnimatedSection
+                animation="fade"
+                options={{ delay: 500 }}
+                className="hidden md:block"
+              >
+                <Link
+                  href="/influencer"
+                  className="inline-block mt-6 text-blue-600 font-medium hover:text-blue-800 hover:underline"
+                >
+                  Learn more about influencer features →
+                </Link>
+              </AnimatedSection>
+            </div>
+          </div>
+
+          <AnimatedSection
+            animation="slide-left"
+            className="order-1 rounded-lg mt-0"
+          >
+            <InfluenceSearchComponent />
+            {/* <div className="absolute inset-0 bg-gradient-to-bl from-purple-600/40 to-transparent"></div> */}
+          </AnimatedSection>
+          <AnimatedSection
+            animation="fade"
+            options={{ delay: 500 }}
+            className="block md:hidden"
+          >
+            <Link
+              href="/brand"
+              className="inline-block mt-6 text-blue-600 font-medium hover:text-blue-800 hover:underline"
+            >
+              Learn more about brand features →
+            </Link>
+          </AnimatedSection>
+        </div>
+      </div>
+    </ParallaxSection>
+  );
+};
+
+// Brand's influencer management section
+export const WhyInfluenceAISection = () => {
+  return (
+    <ParallaxSection speed={0.2} className="py-20">
+      <div className="container relative z-10 bg-white/90 rounded-2xl p-12 shadow-xl">
+        <div className="grid grid-cols-1 md:grid-cols-2 items-center">
+          <div className="order-1">
+            <AnimatedSection animation="fade">
+              <span className="text-blue-600 font-medium">
+                {" "}
+                Why Influence AI?
+              </span>
+              <h2 className="text-3xl font-bold mt-2 mb-6">
+                Influencers selection, Campaign Strategy, Tracking and results
+              </h2>
+            </AnimatedSection>
+
+            <div className="space-y-2 mb-0">
+              <AnimatedSection
+                animation="slide-left"
+                options={{ delay: 100 }}
+                className="feature-point"
+              >
+                <FeaturePoint
+                  title="Influencer Networking Platform"
+                  description="Strategic approaches to maximize value from brand partnerships through aligned objectives."
+                />
+              </AnimatedSection>
+
+              <AnimatedSection
+                animation="slide-left"
+                options={{ delay: 200 }}
+                className="feature-point"
+              >
+                <FeaturePoint
+                  title="Viral Distribution"
+                  description="Plan, execute, and track multiple campaigns from a single dashboard."
+                />
+              </AnimatedSection>
+
+              <AnimatedSection
+                animation="slide-left"
+                options={{ delay: 300 }}
+                className="feature-point"
+              >
+                <FeaturePoint
+                  title="Data Driven Decisions"
+                  description="Measure campaign performance with comprehensive reporting tools."
+                />
+              </AnimatedSection>
+              <AnimatedSection
+                animation="slide-left"
+                options={{ delay: 300 }}
+                className="feature-point"
+              >
+                <FeaturePoint
+                  title="Rich Analytics and Reporting"
+                  description="Measure campaign performance with comprehensive reporting tools."
+                />
+              </AnimatedSection>
+              <AnimatedSection
+                animation="fade"
+                options={{ delay: 500 }}
+                className="hidden md:block"
+              >
+                <Link
+                  href="/about"
+                  className="inline-block mt-6 text-blue-600 font-medium hover:text-blue-800 hover:underline"
+                >
+                  Learn more →
+                </Link>
+              </AnimatedSection>
+            </div>
+          </div>
+
+          <AnimatedSection
+            animation="slide-left"
+            className="order-1 rounded-lg mt-0"
           >
             <InfluenceSearchComponent />
             {/* <div className="absolute inset-0 bg-gradient-to-bl from-purple-600/40 to-transparent"></div> */}
@@ -612,7 +799,7 @@ const FeaturePoint = ({ title, description }) => (
             <path
               strokeLinecap="round"
               strokeLinejoin="round"
-              strokeWidth={2}
+              strokeWidth={3}
               d="M5 13l4 4L19 7"
             />
           </svg>
@@ -620,7 +807,7 @@ const FeaturePoint = ({ title, description }) => (
       </div>
       <div className="ml-3">
         <h3 className="text-lg font-medium">{title}</h3>
-        <p className="mt-1 text-gray-600">{description}</p>
+        <p className="mt-1 text-[12px] text-gray-600">{description}</p>
       </div>
     </div>
   </div>

@@ -8,6 +8,8 @@ import {
   MediaGallerySection,
   AboutSection,
   ContactSection,
+  WhyInfluenceAISection,
+  BrandManagementSection,
 } from '@/app/components/HomePage';
 import StatisticsSection from '@/app/components/StatisticsSection';
 import TestimonialCarousel from '@/app/components/Testimonial';
@@ -24,6 +26,8 @@ export default function Home() {
       <InfluencerFeaturesSection />
       <StatisticsSection />
       <BrandFeaturesSection />
+      <BrandManagementSection />
+      <WhyInfluenceAISection />
       <TestimonialCarousel />
       <CaseStudiesSection />
       <MediaGallerySection />
