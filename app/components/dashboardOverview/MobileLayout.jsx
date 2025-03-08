@@ -74,11 +74,6 @@ const MobileLayout = () => {
       {/* Main Content */}
       <main className="flex-1 overflow-hidden bg-gray-100 overflow-scroll">
         <div className="space-y-4 p-4 pt-6">
-          {/* Featured Content */}
-          <div className="bg-white rounded-2xl shadow overflow-hidden">
-            <BrandPartnershipsComponent />
-          </div>
-
           {/* Latest Updates */}
           <div className="bg-white rounded-2xl shadow overflow-hidden">
             <PortfolioComponent />
@@ -87,6 +82,10 @@ const MobileLayout = () => {
           {/* Trending Topic */}
           <div className="bg-white rounded-2xl shadow overflow-hidden">
             <TrackMetricsComponent />
+          </div>
+          {/* Featured Content */}
+          <div className="bg-white rounded-2xl shadow overflow-hidden">
+            <BrandPartnershipsComponent />
           </div>
         </div>
       </main>

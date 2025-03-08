@@ -8,6 +8,9 @@ import AnimatedCounter from "./AnimatedCounter";
 import ParallaxSection from "./ParallaxSection";
 import MobileLayout from "./dashboardOverview/MobileLayout";
 import InfluenceSearchComponent from "./dashboardOverview/InfluencerSearch";
+import BrandManagementMedia from "@/app/components/dashboardOverview/influencer/BrandManagementMedia";
+import NetworkingComponent from "@/app/components/dashboardOverview/influencer/NetworkingComponent";
+import EngagementComponent from "@/app/components/dashboardOverview/influencer/EngagementComponent";
 
 //  Brand Association Section
 export const BrandAssociationSection = () => {
@@ -241,7 +244,7 @@ export const BrandFeaturesSection = () => {
           >
             <Link
               href="/brand"
-              className="inline-block mt-6 text-blue-600 font-medium hover:text-blue-800 hover:underline"
+              className="mt-6 text-blue-600 font-medium hover:text-blue-800 hover:underline"
             >
               Learn more about brand features →
             </Link>
@@ -256,8 +259,18 @@ export const BrandManagementSection = () => {
   return (
     <ParallaxSection speed={0.2} className="py-20">
       <div className="container relative z-10 bg-white/90 rounded-2xl p-12 shadow-xl">
-        <div className="grid grid-cols-1 md:grid-cols-2 items-center">
-          <div className="order-2">
+        <div className="grid realtgrid-cols-1 md:grid-cols-12 items-center">
+          <AnimatedSection
+            animation="slide-left"
+            className="order-1 col-span-5 rounded-lg mt-0"
+          >
+            <BrandManagementMedia />
+            {/* <div className="absolute inset-0 bg-gradient-to-bl from-purple-600/40 to-transparent"></div> */}
+          </AnimatedSection>
+          <div className="order-2 realtive col-span-2">
+            {/*floating cards*/}
+          </div>
+          <div className="order-3 col-span-5">
             <AnimatedSection animation="fade">
               <span className="text-blue-600 font-medium">For Influencers</span>
               <h2 className="text-3xl font-bold mt-2 mb-6">
@@ -302,7 +315,7 @@ export const BrandManagementSection = () => {
               <AnimatedSection
                 animation="fade"
                 options={{ delay: 500 }}
-                className="hidden md:block"
+                className="block"
               >
                 <Link
                   href="/influencer"
@@ -313,26 +326,6 @@ export const BrandManagementSection = () => {
               </AnimatedSection>
             </div>
           </div>
-
-          <AnimatedSection
-            animation="slide-left"
-            className="order-1 rounded-lg mt-0"
-          >
-            <InfluenceSearchComponent />
-            {/* <div className="absolute inset-0 bg-gradient-to-bl from-purple-600/40 to-transparent"></div> */}
-          </AnimatedSection>
-          <AnimatedSection
-            animation="fade"
-            options={{ delay: 500 }}
-            className="block md:hidden"
-          >
-            <Link
-              href="/brand"
-              className="inline-block mt-6 text-blue-600 font-medium hover:text-blue-800 hover:underline"
-            >
-              Learn more about brand features →
-            </Link>
-          </AnimatedSection>
         </div>
       </div>
     </ParallaxSection>
@@ -405,8 +398,8 @@ export const WhyInfluenceAISection = () => {
                 className="hidden md:block"
               >
                 <Link
-                  href="/about"
-                  className="inline-block mt-6 text-blue-600 font-medium hover:text-blue-800 hover:underline"
+                  href="/features"
+                  className="mt-6 text-blue-600 font-medium hover:text-blue-800 hover:underline"
                 >
                   Learn more →
                 </Link>
@@ -416,24 +409,28 @@ export const WhyInfluenceAISection = () => {
 
           <AnimatedSection
             animation="slide-left"
-            className="order-1 rounded-lg mt-0"
+            className="order-1 relative rounded-lg mt-0"
           >
-            <InfluenceSearchComponent />
+            <div className="absolute bottom-0 right-0">
+              <EngagementComponent />
+            </div>
+
+            <NetworkingComponent />
             {/* <div className="absolute inset-0 bg-gradient-to-bl from-purple-600/40 to-transparent"></div> */}
           </AnimatedSection>
-          <AnimatedSection
-            animation="fade"
-            options={{ delay: 500 }}
-            className="block md:hidden"
-          >
-            <Link
-              href="/brand"
-              className="inline-block mt-6 text-blue-600 font-medium hover:text-blue-800 hover:underline"
-            >
-              Learn more about brand features →
-            </Link>
-          </AnimatedSection>
         </div>
+        <AnimatedSection
+          animation="fade"
+          options={{ delay: 500 }}
+          className="block md:hidden mt-10"
+        >
+          <Link
+            href="/features"
+            className="mt-6 text-blue-600 font-medium hover:text-blue-800 hover:underline"
+          >
+            Learn more →
+          </Link>
+        </AnimatedSection>
       </div>
     </ParallaxSection>
   );

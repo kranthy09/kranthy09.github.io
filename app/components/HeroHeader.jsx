@@ -99,7 +99,7 @@ const HeroSection = () => {
     <div className="bg-gradient-to-br from-indigo-900 via-blue-800 to-indigo-900 min-h-screen flex flex-col items-center justify-center px-4 sm:px-6 lg:px-8 p-8 overflow-hidden">
       <div className="w-full max-w-7xl mx-auto">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-          <div className="text-white space-y-8">
+          <div className="text-white space-y-2">
             {/* Animated Title */}
             <motion.p
               className="text-lg sm:text-xl text-blue-200 max-w-xl font-body"
@@ -116,7 +116,7 @@ const HeroSection = () => {
 
             {/* Content that appears after title animation */}
             <motion.div
-              className="space-y-6"
+              className="space-y-4"
               initial="hidden"
               animate={titleComplete ? "visible" : "hidden"}
               variants={contentVariants}
