@@ -11,6 +11,7 @@ import InfluenceSearchComponent from "./dashboardOverview/InfluencerSearch";
 import BrandManagementMedia from "@/app/components/dashboardOverview/influencer/BrandManagementMedia";
 import NetworkingComponent from "@/app/components/dashboardOverview/influencer/NetworkingComponent";
 import EngagementComponent from "@/app/components/dashboardOverview/influencer/EngagementComponent";
+import InstagramReel from "@/app/components/InstagramReelComponent";
 
 //  Brand Association Section
 export const BrandAssociationSection = () => {
@@ -588,10 +589,10 @@ export const AboutSection = () => {
 
             <AnimatedSection animation="slide-left" options={{ delay: 200 }}>
               <p className="text-gray-700 mb-4">
-                Founded in 2020, YourBrand was created to bridge the gap between
-                brands and influencers. We recognized the challenges both sides
-                faced in establishing authentic partnerships that deliver real
-                results.
+                Founded in 2020, Influence AI was created to bridge the gap
+                between brands and influencers. We recognized the challenges
+                both sides faced in establishing authentic partnerships that
+                deliver real results.
               </p>
             </AnimatedSection>
 
