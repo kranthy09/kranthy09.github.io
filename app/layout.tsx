@@ -24,9 +24,10 @@ const bodyFont = Inter({
   display: 'swap',
 });
 
-export const metadata: Metadata = {
-  title: "Influence AI website",
-  description: "Social Media Application to connect with influencers and manage campaigns",
+export const metadata = {
+  title: "InfluenceAI",
+  description: "India's Only AI powered Influencer Marketing Agency for all your needs",
+  caption: "Right Influencer for Right Brand",
 };
 
 export default function RootLayout({

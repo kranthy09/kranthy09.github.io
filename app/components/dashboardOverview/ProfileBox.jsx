@@ -16,7 +16,7 @@ const images = [
 ];
 
 const userImage = {
-  src: "/user-pic-1.avif",
+  src: "/user-pic-3.jpg",
   alt: "User Profile Picture",
   id: "userimg1",
 };

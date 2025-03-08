@@ -1,13 +1,23 @@
 "use client";
 
 import { useState, useEffect } from "react";
+import { CircleCheck } from "lucide-react";
 import { motion } from "framer-motion";
-// import Link from "next/link";
 import ProfileBoxUI from "./dashboardOverview/ProfileBox";
 
 const HeroSection = () => {
   const [titleComplete, setTitleComplete] = useState(false);
 
+  const pageData = {
+    title:
+      "India's Only AI powered Influencer Marketing Agency for all your needs",
+    description: [
+      { key: "1", text: "AI Based Influencer search across 35+ generes" },
+      { key: "2", text: "High ROI for brands" },
+      { key: "3", text: "End-to-End campaign strategy & planning" },
+    ],
+    caption: "Right Influencer for Right Brand",
+  };
   // Title animation variants
   const titleVariants = {
     hidden: { opacity: 0 },
@@ -76,36 +86,33 @@ const HeroSection = () => {
     },
   };
 
-  // Text to animate letter by letter
-  const titleText = "Right Influencer \nFor Right Brand";
-
   useEffect(() => {
     // Set title complete after animation duration (adjust as needed)
     const timer = setTimeout(() => {
       setTitleComplete(true);
-    }, titleText.length * 50 + 300); // Add buffer time after last letter
+    }, pageData.caption.length * 50 + 300); // Add buffer time after last letter
 
     return () => clearTimeout(timer);
   }, []);
 
   return (
-    <div className="bg-gradient-to-br from-indigo-900 via-blue-800 to-indigo-900 min-h-screen flex flex-col items-center justify-center px-4 sm:px-6 lg:px-8 overflow-hidden">
+    <div className="bg-gradient-to-br from-indigo-900 via-blue-800 to-indigo-900 min-h-screen flex flex-col items-center justify-center px-4 sm:px-6 lg:px-8 p-8 overflow-hidden">
       <div className="w-full max-w-7xl mx-auto">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           <div className="text-white space-y-8">
             {/* Animated Title */}
-            <motion.h1
-              className="text-4xl sm:text-5xl md:text-6xl font-bold tracking-tight font-heading leading-tight text-white"
+            <motion.p
+              className="text-lg sm:text-xl text-blue-200 max-w-xl font-body"
               initial="hidden"
               animate={"visible"}
               variants={titleVariants}
             >
-              {titleText.split("").map((letter, index) => (
+              {pageData.caption.split("").map((letter, index) => (
                 <motion.span key={index} variants={letterVariants}>
                   {letter === " " ? "\u00A0" : letter}
                 </motion.span>
               ))}
-            </motion.h1>
+            </motion.p>
 
             {/* Content that appears after title animation */}
             <motion.div
@@ -114,35 +121,80 @@ const HeroSection = () => {
               animate={titleComplete ? "visible" : "hidden"}
               variants={contentVariants}
             >
-              <motion.p
+              <motion.h1
+                className="text-3xl sm:text-3xl md:text-4xl font-bold tracking-tight font-heading leading-tight text-white"
+                initial="hidden"
+                animate={"visible"}
+                variants={titleVariants}
+              >
+                {pageData.title}
+              </motion.h1>
+              <motion.div
                 className="text-lg sm:text-xl text-blue-200 max-w-xl font-body"
                 variants={contentVariants}
               >
-                Streamline your business processes with our powerful dashboard.
-                Save time, increase productivity, and make data-driven
-                decisions.
-              </motion.p>
+                <div className="flex items-center">
+                  <div className="flex-col-1 mr-2">
+                    <CircleCheck size={18} color="#00ff1e" />
+                  </div>
+                  <div className="flex-col-1">
+                    <p className="text-[14px]">
+                      {pageData.description[0].text}
+                    </p>
+                  </div>
+                </div>
+              </motion.div>
+              <motion.div
+                className="text-lg sm:text-xl text-blue-200 max-w-xl font-body"
+                variants={contentVariants}
+              >
+                <div className="flex items-center">
+                  <div className="flex-col-1 mr-2">
+                    <CircleCheck size={18} color="#00ff1e" />
+                  </div>
+                  <div className="flex-col-1">
+                    <p className="text-[14px]">
+                      {pageData.description[1].text}
+                    </p>
+                  </div>
+                </div>
+              </motion.div>
+              <motion.div
+                className="text-lg sm:text-xl text-blue-200 max-w-xl font-body"
+                variants={contentVariants}
+              >
+                <div className="flex items-center">
+                  <div className="flex-col-1 mr-2">
+                    <CircleCheck size={18} color="#00ff1e" />
+                  </div>
+                  <div className="flex-col-1">
+                    <p className="text-[14px]">
+                      {pageData.description[2].text}
+                    </p>
+                  </div>
+                </div>
+              </motion.div>
 
               <motion.div
                 className="flex flex-wrap gap-4"
                 variants={contentVariants}
               >
                 <motion.button
-                  className="px-6 py-3 bg-blue-500 text-white font-medium rounded-lg shadow-lg hover:shadow-xl font-body"
+                  className="px-6 py-3 bg-indigo-900 text-white font-medium rounded-3xl shadow-xl hover:bg-blue-500 hover:text-black hover:shadow-xl font-body"
                   variants={buttonHoverVariants}
                   whileHover="hover"
                   whileTap={{ scale: 0.95 }}
                 >
-                  Get Started
+                  I'm a Brand
                 </motion.button>
 
                 <motion.button
-                  className="px-6 py-3 bg-transparent border-2 border-blue-300 text-blue-100 font-medium rounded-lg hover:bg-blue-800/30 font-body"
+                  className="px-6 py-3 bg-transparent border-2 border-indigo-900 text-blue-100 font-medium rounded-3xl shadow-xl hover:bg-blue-800/30 font-body"
                   variants={buttonHoverVariants}
                   whileHover="hover"
                   whileTap={{ scale: 0.95 }}
                 >
-                  Learn More
+                  I'm an Influencer
                 </motion.button>
               </motion.div>
             </motion.div>
