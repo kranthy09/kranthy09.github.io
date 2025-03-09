@@ -112,7 +112,7 @@ const ImageCarousel = ({
                   src={image.src}
                   alt={image.alt || `Slide ${index + 1}`}
                   fill
-                  className="w-full h-full md:object-contain object-cover"
+                  className="w-full h-full object-contain"
                 />
                 {/* Link Icon */}
                 <div
