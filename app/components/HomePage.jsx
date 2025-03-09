@@ -11,7 +11,7 @@ import InfluenceSearchComponent from "./dashboardOverview/InfluencerSearch";
 import BrandManagementMedia from "@/app/components/dashboardOverview/influencer/BrandManagementMedia";
 import NetworkingComponent from "@/app/components/dashboardOverview/influencer/NetworkingComponent";
 import EngagementComponent from "@/app/components/dashboardOverview/influencer/EngagementComponent";
-import InstagramReel from "@/app/components/InstagramReelComponent";
+import EnhancedImageCarousel from "@/app/components/EnhancedImageCarousel";
 
 //  Brand Association Section
 export const BrandAssociationSection = () => {
@@ -412,11 +412,10 @@ export const WhyInfluenceAISection = () => {
             animation="slide-left"
             className="order-1 relative rounded-lg mt-0"
           >
-            <div className="absolute bottom-0 right-0">
+            <NetworkingComponent />
+            <div className="absolute bottom-0 right-0 md:right-20">
               <EngagementComponent />
             </div>
-
-            <NetworkingComponent />
             {/* <div className="absolute inset-0 bg-gradient-to-bl from-purple-600/40 to-transparent"></div> */}
           </AnimatedSection>
         </div>
@@ -439,16 +438,94 @@ export const WhyInfluenceAISection = () => {
 
 //  Media Gallery Section
 export const MediaGallerySection = () => {
-  const [activeIndex, setActiveIndex] = useState(0);
+  const carouselImages = [
+    {
+      src: "/events/virajita.jpg",
+      alt: "Image 1",
+      caption: "Influencer Virajita",
+      link: "https://www.instagram.com/p/Cp5G_Y4p_bV/",
+    },
+    {
+      src: "/events/priyanka-jain.jpg",
+      alt: "Image 2",
+      caption: "City skyline",
+      link: "https://www.instagram.com/p/CnQ3gwIo5CD/",
+    },
+    {
+      src: "/events/suma-garu.jpg",
+      alt: "Image 3",
+      link: "https://www.instagram.com/p/CnPLm8hhSOz/",
+    },
+    {
+      src: "/events/bhavishya.jpg",
+      alt: "Image 4",
+      caption: "Mountain scenery",
+      link: "https://www.instagram.com/p/CnQ1sYmISQ6/",
+    },
+    {
+      src: "/events/hyderabadi-palate.jpg",
+      alt: "Image 5",
+      caption: "Sunset view",
+      link: "https://www.instagram.com/p/CnRtT51qZeV/",
+    },
+    {
+      src: "/events/srilalitha-ugadi.jpg",
+      alt: "Image 8",
+      caption: "Forest trail",
+      link: "https://www.instagram.com/p/CpPEspKD3CX/",
+    },
+    {
+      src: "/events/lasya-manjunath.jpg",
+      alt: "Image 6",
+      caption: "Beach sunset",
+      link: "https://www.instagram.com/p/CxZtrm5RRTl/",
+    },
+    {
+      src: "/events/madhupriya.jpg",
+      alt: "Image 7",
+      link: "https://www.instagram.com/p/Cr2nwUppOfh/",
+    },
+    {
+      src: "/events/srilalitha-holi.jpg",
+      alt: "Image 8",
+      caption: "Forest trail",
+      link: "https://www.instagram.com/p/CqWwhDvJnJ-/",
+    },
 
-  // Sample media data
-  const mediaItems = [
-    { type: "image", src: "/file.svg", alt: "Marketing Conference 2023" },
-    { type: "image", src: "/globe.svg", alt: "Summer Campaign Launch" },
-    { type: "image", src: "/globe.svg", alt: "Influencer Meetup" },
-    { type: "image", src: "/file.svg", alt: "Fashion Week Collaboration" },
-    { type: "image", src: "/globe.svg", alt: "Brand Workshop" },
-    { type: "image", src: "/file.svg", alt: "Product Launch Event" },
+    {
+      src: "/events/the-hungry-indians-sankranthi.jpg",
+      alt: "Image 10",
+      caption: "Desert landscape",
+      link: "https://www.instagram.com/p/CnRsE8ZKDSo/",
+    },
+    {
+      src: "/events/bhavishya.jpg",
+      alt: "Image 11",
+      caption: "Influencer Bhavishya",
+      link: "https://www.instagram.com/p/Cp4RBkmjng7/",
+    },
+    {
+      src: "/events/srilalitha-sriramanavami.jpg",
+      alt: "Image 9",
+      link: "https://www.instagram.com/p/Cmp_bdiB7Zv/",
+    },
+
+    {
+      src: "/events/thindam-tirugudam-sankranthi.jpg",
+      alt: "Image 11",
+      link: "https://www.instagram.com/p/CnPUdqkB4Un/",
+    },
+    {
+      src: "/events/thindibotu.jpg",
+      alt: "Image 12",
+      caption: "Snowy mountains",
+      link: "https://www.instagram.com/p/Cp0GN4rA0dT/",
+    },
+    {
+      src: "/events/virajita-ugadi.jpg",
+      alt: "Image 13",
+      link: "https://www.instagram.com/p/Cp5G_Y4p_bV/",
+    },
   ];
 
   return (
@@ -461,100 +538,13 @@ export const MediaGallerySection = () => {
             community of brands and influencers.
           </p>
         </AnimatedSection>
-
-        <AnimatedSection
-          animation="zoom"
-          className="relative overflow-hidden rounded-xl shadow-2xl"
-        >
-          <div className="flex items-center justify-center">
-            <button
-              className="absolute left-4 z-10 bg-white p-2 rounded-full shadow-md hover:bg-gray-100 transition-all"
-              onClick={() =>
-                setActiveIndex(
-                  (activeIndex - 1 + mediaItems.length) % mediaItems.length
-                )
-              }
-            >
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                className="h-6 w-6"
-                fill="none"
-                viewBox="0 0 24 24"
-                stroke="currentColor"
-              >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth={2}
-                  d="M15 19l-7-7 7-7"
-                />
-              </svg>
-            </button>
-
-            <div className="relative h-96 w-full overflow-hidden">
-              <div
-                className="flex transition-transform duration-700 ease-in-out h-full"
-                style={{ transform: `translateX(-${activeIndex * 100}%)` }}
-              >
-                {mediaItems.map((item, index) => (
-                  <div key={index} className="min-w-full h-full px-0">
-                    <div className="relative h-full w-full">
-                      <Image
-                        src={item.src}
-                        alt={item.alt}
-                        fill
-                        className="object-cover"
-                      />
-                      <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/90 via-black/60 to-transparent p-8">
-                        <h3 className="text-white text-2xl font-bold">
-                          {item.alt}
-                        </h3>
-                        <p className="text-gray-300 mt-2">
-                          Explore our recent events and campaigns
-                        </p>
-                      </div>
-                    </div>
-                  </div>
-                ))}
-              </div>
-            </div>
-
-            <button
-              className="absolute right-4 z-10 bg-white p-2 rounded-full shadow-md hover:bg-gray-100 transition-all"
-              onClick={() =>
-                setActiveIndex((activeIndex + 1) % mediaItems.length)
-              }
-            >
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                className="h-6 w-6"
-                fill="none"
-                viewBox="0 0 24 24"
-                stroke="currentColor"
-              >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth={2}
-                  d="M9 5l7 7-7 7"
-                />
-              </svg>
-            </button>
-          </div>
-
-          <div className="flex justify-center mt-6 space-x-2">
-            {mediaItems.map((_, index) => (
-              <button
-                key={index}
-                className={`h-2 w-10 rounded-full transition-all ${
-                  activeIndex === index
-                    ? "bg-blue-600 w-16"
-                    : "bg-gray-500 hover:bg-gray-400"
-                }`}
-                onClick={() => setActiveIndex(index)}
-              />
-            ))}
-          </div>
+        <AnimatedSection animation="fade">
+          <EnhancedImageCarousel
+            images={carouselImages}
+            autoSlideInterval={4000}
+            showItemsCount={3}
+            height={300}
+          />
         </AnimatedSection>
       </div>
     </section>
