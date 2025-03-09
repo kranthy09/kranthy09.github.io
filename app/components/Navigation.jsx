@@ -1,11 +1,11 @@
-'use client';
+"use client";
 
 // components/Navigation/Navbar.jsx
-import { useState, useEffect } from 'react';
-import Link from 'next/link';
-import Image from 'next/image';
-import NavItem from './NavItem';
-import { usePathname } from 'next/navigation';
+import { useState, useEffect } from "react";
+import Link from "next/link";
+import Image from "next/image";
+import NavItem from "./NavItem";
+import { usePathname } from "next/navigation";
 
 const Navigation = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -20,19 +20,21 @@ const Navigation = () => {
       }
     };
 
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
-    console.log(isMenuOpen)
+    console.log(isMenuOpen);
   };
 
   return (
-    <nav className={`fixed w-full z-50 transition-all duration-300 ${
-      scrolled ? 'bg-white shadow-md py-2' : 'bg-transparent py-4'
-    }`}>
+    <nav
+      className={`fixed w-full z-50 transition-all duration-300 ${
+        scrolled ? "bg-white shadow-md py-2" : "bg-transparent py-4"
+      }`}
+    >
       <div className="container mx-auto px-4">
         <div className="flex justify-between items-center">
           {/* Logo */}
@@ -46,7 +48,9 @@ const Navigation = () => {
                 className="mr-2"
                 priority
               />
-              <span className="text-primary font-bold text-xl">InfluenceAI</span>
+              <span className="text-primary font-bold text-xl">
+                InfluenceAI
+              </span>
             </Link>
           </div>
 
@@ -60,7 +64,10 @@ const Navigation = () => {
             <NavItem href="/about" label="About" />
             <NavItem href="/contact" label="Contact" />
 
-            <Link href="/signin" className="btn-primary">
+            <Link
+              href="/signin"
+              className="btn-primary rounded-3xl bg-orange-600"
+            >
               Sign In
             </Link>
           </div>
@@ -112,7 +119,10 @@ const Navigation = () => {
             <MobileNavItem href="/about" label="About" />
             <MobileNavItem href="/contact" label="Contact" />
 
-            <Link href="/signin" className="block w-full text-center py-3 my-2 rounded bg-primary text-white font-medium">
+            <Link
+              href="/signin"
+              className="block w-full text-center py-3 my-2 rounded-3xl bg-orange-600 text-white font-medium"
+            >
               Sign In
             </Link>
           </div>
@@ -125,23 +135,21 @@ const Navigation = () => {
 // Mobile navigation item with active state
 const MobileNavItem = ({ href, label }) => {
   const pathname = usePathname();
-  const isActive = pathname === href ||
-                  (href !== '/' && pathname.startsWith(href));
+  const isActive =
+    pathname === href || (href !== "/" && pathname.startsWith(href));
 
   return (
     <Link
       href={href}
       className={`block py-2 px-4 rounded nav-link ${
         isActive
-          ? 'bg-blue-50 text-primary active'
-          : 'text-gray-700 hover:bg-gray-50 hover:text-primary'
+          ? "bg-blue-50 text-primary active"
+          : "text-gray-700 hover:bg-gray-50 hover:text-primary"
       }`}
     >
       {label}
     </Link>
   );
 };
-
-
 
 export default Navigation;

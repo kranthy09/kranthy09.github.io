@@ -180,7 +180,7 @@ const HeroSection = () => {
                 variants={contentVariants}
               >
                 <motion.button
-                  className="px-6 py-3 bg-indigo-900 text-white font-medium rounded-3xl shadow-xl hover:bg-blue-500 hover:text-black hover:shadow-xl font-body"
+                  className="px-6 py-3 bg-orange-600 text-white font-medium rounded-3xl shadow-xl hover:bg-indigo-900 hover:text-white hover:shadow-xl font-body"
                   variants={buttonHoverVariants}
                   whileHover="hover"
                   whileTap={{ scale: 0.95 }}
@@ -189,7 +189,7 @@ const HeroSection = () => {
                 </motion.button>
 
                 <motion.button
-                  className="px-6 py-3 bg-transparent border-2 border-indigo-900 text-blue-100 font-medium rounded-3xl shadow-xl hover:bg-blue-800/30 font-body"
+                  className="px-6 py-3 bg-transparent border-2 border-orange-600 text-blue-100 font-medium rounded-3xl shadow-xl hover:bg-blue-800/30 font-body"
                   variants={buttonHoverVariants}
                   whileHover="hover"
                   whileTap={{ scale: 0.95 }}
