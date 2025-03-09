@@ -5,7 +5,7 @@ import { Link2 } from "lucide-react";
 import Image from "next/image";
 
 const ImageCarousel = ({
-  images = [],
+  images,
   autoSlideInterval = 3000,
   showItemsCount = 3,
   height = 500,
@@ -53,6 +53,11 @@ const ImageCarousel = ({
       nextSlide();
     } else if (touchEndX - touchStartX > 75) {
       prevSlide();
+    }
+  };
+  const handleLinkClick = (url) => {
+    if (url) {
+      window.open(url, "_blank", "noopener,noreferrer");
     }
   };
 
