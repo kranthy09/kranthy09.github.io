@@ -12,6 +12,7 @@ import BrandManagementMedia from "@/app/components/dashboardOverview/influencer/
 import NetworkingComponent from "@/app/components/dashboardOverview/influencer/NetworkingComponent";
 import EngagementComponent from "@/app/components/dashboardOverview/influencer/EngagementComponent";
 import EnhancedImageCarousel from "@/app/components/EnhancedImageCarousel";
+import ImageCarousel from "@/app/components/ImageCarousel";
 
 //  Brand Association Section
 export const BrandAssociationSection = () => {
@@ -539,7 +540,7 @@ export const MediaGallerySection = () => {
           </p>
         </AnimatedSection>
         <AnimatedSection animation="fade">
-          <EnhancedImageCarousel
+          <ImageCarousel
             images={carouselImages}
             autoSlideInterval={4000}
             showItemsCount={3}

@@ -1,12 +1,14 @@
 "use client";
 
 import React, { useState, useEffect, useRef } from "react";
+import { Link2 } from "lucide-react";
+import Image from "next/image";
 
 const ImageCarousel = ({
   images = [],
   autoSlideInterval = 3000,
   showItemsCount = 3,
-  height = 300,
+  height = 500,
 }) => {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [touchStartX, setTouchStartX] = useState(0);
@@ -106,11 +108,24 @@ const ImageCarousel = ({
               style={{ width: `${100 / showItemsCount}%` }}
             >
               <div className="relative h-full w-full rounded-lg overflow-hidden">
-                <img
-                  src={image.url}
+                <Image
+                  src={image.src}
                   alt={image.alt || `Slide ${index + 1}`}
-                  className="w-full h-full object-cover"
+                  fill
+                  className="w-full h-full md:object-contain object-cover"
                 />
+                {/* Link Icon */}
+                <div
+                  className="absolute bottom-4 right-4 bg-white bg-opacity-80 p-2 rounded-full shadow-md transform transition-transform duration-300 group-hover:scale-110 hover:bg-opacity-100 cursor-pointer"
+                  onClick={() => handleLinkClick(image.link)}
+                  aria-label={`Visit link for ${
+                    image.alt || `Image ${index + 1}`
+                  }`}
+                  role="button"
+                  tabIndex={0}
+                >
+                  <Link2 size={16} color="#f20765" strokeWidth={1} />
+                </div>
                 {image.text && (
                   <div className="absolute bottom-0 left-0 right-0 bg-black bg-opacity-70 text-white p-4 text-center">
                     {image.text}
