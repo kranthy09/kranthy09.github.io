@@ -180,7 +180,7 @@ const HeroSection = () => {
                 variants={contentVariants}
               >
                 <motion.button
-                  className="px-6 py-3 bg-orange-600 text-white font-medium rounded-3xl shadow-xl hover:bg-indigo-900 hover:text-white hover:shadow-xl font-body"
+                  className="px-6 py-3 bg-secondary text-white font-medium rounded-3xl shadow-xl hover:bg-indigo-900 hover:text-white hover:shadow-xl font-body"
                   variants={buttonHoverVariants}
                   whileHover="hover"
                   whileTap={{ scale: 0.95 }}

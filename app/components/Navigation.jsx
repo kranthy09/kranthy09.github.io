@@ -10,6 +10,10 @@ import { usePathname } from "next/navigation";
 const Navigation = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
+  const pathname = usePathname();
+  useEffect(() => {
+    setIsMenuOpen(false);
+  }, [pathname]);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -27,6 +31,9 @@ const Navigation = () => {
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
     console.log(isMenuOpen);
+  };
+  const closeMenu = () => {
+    setIsMenuOpen(false);
   };
 
   return (
@@ -66,7 +73,7 @@ const Navigation = () => {
 
             <Link
               href="/signin"
-              className="btn-primary rounded-3xl bg-orange-600"
+              className="btn-primary rounded-3xl bg-secondary"
             >
               Sign In
             </Link>
@@ -111,17 +118,29 @@ const Navigation = () => {
       {isMenuOpen && (
         <div className="md:hidden bg-white shadow-lg">
           <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3">
-            <MobileNavItem href="/" label="Home" />
-            <MobileNavItem href="/features" label="Features" />
-            <MobileNavItem href="/casestudies" label="Case Studies" />
-            <MobileNavItem href="/brand" label="Brand" />
-            <MobileNavItem href="/influencer" label="Influencer" />
-            <MobileNavItem href="/about" label="About" />
-            <MobileNavItem href="/contact" label="Contact" />
+            <MobileNavItem href="/" label="Home" onClick={closeMenu} />
+            <MobileNavItem
+              href="/features"
+              label="Features"
+              onClick={closeMenu}
+            />
+            <MobileNavItem
+              href="/casestudies"
+              label="Case Studies"
+              onClick={closeMenu}
+            />
+            <MobileNavItem href="/brand" label="Brand" onClick={closeMenu} />
+            <MobileNavItem
+              href="/influencer"
+              label="Influencer"
+              onClick={closeMenu}
+            />
+            <MobileNavItem href="/about" label="About" onClick={closeMenu} />
 
             <Link
               href="/signin"
-              className="block w-full text-center py-3 my-2 rounded-3xl bg-orange-600 text-white font-medium"
+              className="block w-full text-center py-3 my-2 rounded bg-primary text-white font-medium"
+              onClick={closeMenu}
             >
               Sign In
             </Link>
@@ -133,13 +152,14 @@ const Navigation = () => {
 };
 
 // Mobile navigation item with active state
-const MobileNavItem = ({ href, label }) => {
+const MobileNavItem = ({ href, label, onClick }) => {
   const pathname = usePathname();
   const isActive =
     pathname === href || (href !== "/" && pathname.startsWith(href));
 
   return (
     <Link
+      onClick={onClick}
       href={href}
       className={`block py-2 px-4 rounded nav-link ${
         isActive

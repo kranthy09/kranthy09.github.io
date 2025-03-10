@@ -53,7 +53,7 @@ export default function NetworkingComponent() {
                 alt={influencer.name}
                 width={64}
                 height={64}
-                className="object-cover rounded-full"
+                className="object-cover rounded-full w-full h-full"
               />
               <div className="ml-4">
                 <div className="flex items-center">

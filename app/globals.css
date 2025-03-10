@@ -22,12 +22,16 @@
 :root {
   --background: #ffffff;
   --foreground: #000000;
+  --primary: #1A237E;
+  --secondary: #F4511E;
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
     --background: #ffffff;
     --foreground: #000000;
+    --primary: #1A237E;
+    --secondary: #F4511E;
   }
 }
 

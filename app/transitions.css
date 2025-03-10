@@ -51,6 +51,7 @@
   /* Navigation link specific transitions */
   .nav-link {
     position: relative;
+    color: currentColor;
   }
 
   .nav-link::after {
@@ -60,12 +61,13 @@
     height: 2px;
     bottom: -4px;
     left: 0;
-    background-color: currentColor;
+    background-color: var(--secondary);
     transition: width 0.3s ease;
   }
 
   .nav-link:hover::after {
     width: 100%;
+    background-color: var(--primary);
   }
 
   /* Active link animation */
