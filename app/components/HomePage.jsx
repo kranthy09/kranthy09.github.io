@@ -17,12 +17,8 @@ import ImageCarousel from "@/app/components/ImageCarousel";
 //  Brand Association Section
 export const BrandAssociationSection = () => {
   const brands = [
-    { name: "Microsoft", logo: "/Apple-Logo.png" },
-    { name: "Amazon", logo: "./file.svg" },
-    { name: "Google", logo: "./globe.svg" },
-    { name: "Apple", logo: "./next.svg" },
-    { name: "Samsung", logo: "./influenceai-logo.svg" },
-    { name: "Nike", logo: "./window.svg" },
+    { name: "Varahi", logo: "/varahi-logo-org.webp" },
+    { name: "Olive", logo: "/OLIVE_MITHAI_LOGO.webp" },
   ];
 
   return (
@@ -44,14 +40,14 @@ export const BrandAssociationSection = () => {
               key={brand.name}
               animation="fade"
               options={{ delay: index * 100 }}
-              className="grayscale hover:grayscale-0 transition-all"
+              className="transition-all"
             >
               <Image
                 src={brand.logo}
                 alt={`${brand.name} logo`}
-                width={120}
-                height={60}
-                className="h-12 w-auto object-contain"
+                width={150}
+                height={70}
+                className="h-auto w-auto object-contain"
               />
             </AnimatedSection>
           ))}

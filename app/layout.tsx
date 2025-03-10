@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import { Inter, Outfit } from 'next/font/google';
 
 import "./globals.css";
-import NavProgressComponent from "./components/NavProgressComponent";
+import NavProgressComponent from "@/app/components/NavProgressComponent";
 import Navigation from "@/app/components/Navigation";
 import PageTransition from "./components/PageTransition";
 import Footer from "@/app/components/FooterComponent";

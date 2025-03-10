@@ -1,10 +1,12 @@
+"use client";
+
 import { Suspense } from "react";
-import NavigationProgressBar from "./NavigationProgress";
+import NavigationProgressBar from "@/app/components/NavigationProgress";
 
 export default function NavProgressComponent() {
   return (
     <div>
-      <Suspense fallback={<div>Loading...</div>}>
+      <Suspense fallback={null}>
         <NavigationProgressBar />
       </Suspense>
     </div>

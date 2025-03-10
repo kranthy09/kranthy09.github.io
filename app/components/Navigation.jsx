@@ -48,14 +48,14 @@ const Navigation = () => {
           <div className="flex-shrink-0">
             <Link href="/" className="flex items-center">
               <Image
-                src="/influenceai-logo.svg"
+                src="/influenceai-digital.png"
                 alt="Company Logo"
-                width={40}
-                height={40}
-                className="mr-2"
+                width={75}
+                height={75}
+                className="ml-4"
                 priority
               />
-              <span className="text-primary font-bold text-xl">
+              <span className="text-indigo-900 font-bold text-xl">
                 InfluenceAI
               </span>
             </Link>
