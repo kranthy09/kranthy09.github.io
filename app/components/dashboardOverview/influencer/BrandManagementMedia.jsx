@@ -8,8 +8,8 @@ export default function BrandManagementMedia() {
           </button>
         </div>
 
-        <div className="overflow-hidden">
-          <table className="w-fit divide-y divide-gray-200">
+        <div className="overflow-y-auto">
+          <table className="w-full divide-y divide-gray-200">
             <thead className="bg-gray-50">
               <tr>
                 <th className="px-3 py-3 text-left text-[8px] text-[10px] text-gray-500 uppercase tracking-wider">

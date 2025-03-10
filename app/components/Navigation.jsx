@@ -48,7 +48,7 @@ const Navigation = () => {
           <div className="flex-shrink-0">
             <Link href="/" className="flex items-center">
               <Image
-                src="/influenceai-digital.png"
+                src="/influenceai-logo-org.png"
                 alt="Company Logo"
                 width={75}
                 height={75}
@@ -136,10 +136,15 @@ const Navigation = () => {
               onClick={closeMenu}
             />
             <MobileNavItem href="/about" label="About" onClick={closeMenu} />
+            <MobileNavItem
+              href="/contact"
+              label="contact"
+              onClick={closeMenu}
+            />
 
             <Link
               href="/signin"
-              className="block w-full text-center py-3 my-2 rounded bg-primary text-white font-medium"
+              className="block w-full text-center py-3 my-2 rounded bg-secondary text-white font-medium"
               onClick={closeMenu}
             >
               Sign In

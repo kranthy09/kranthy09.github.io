@@ -154,19 +154,19 @@ export default function BrandPage() {
       title: "Increase Brand Awareness",
       description:
         "Expand your reach and increase visibility through authentic partnerships with influencers who resonate with your target audience.",
-      image: "/globe.svg",
+      image: "/icons/brand-awareness-icon.svg",
     },
     {
       title: "Drive Conversions & Sales",
       description:
         "Generate measurable results with conversion-focused campaigns that turn influencer audiences into loyal customers.",
-      image: "/vercel.svg",
+      image: "/icons/conversions-sales-icon.svg",
     },
     {
       title: "Build Brand Trust & Credibility",
       description:
         "Leverage the trust influencers have established with their audiences to build credibility for your brand and products.",
-      image: "/file.svg",
+      image: "/icons/brand-trust-static-icon.svg",
     },
   ];
 
@@ -189,10 +189,10 @@ export default function BrandPage() {
       >
         <div className="absolute inset-0 z-0">
           <Image
-            src="/globe.svg"
+            src="/header/influencer-header.png"
             alt="Brand Marketing Dashboard"
             fill
-            className="object-cover"
+            className="object-contain md:object-cover"
             priority
           />
           <div className="absolute inset-0 bg-gradient-to-r from-blue-900/90 to-indigo-900/80"></div>
@@ -239,15 +239,7 @@ export default function BrandPage() {
             className="mt-16"
           >
             <div className="flex justify-center">
-              <div className="flex space-x-8 items-center">
-                <Image src="./frame.svg" alt="logo2" height={50} width={50} />
-                <Image
-                  src="./Nextjs-logo.svg"
-                  alt="logo3"
-                  height={50}
-                  width={50}
-                />
-              </div>
+              <div className="flex space-x-8 items-center md:h-20"></div>
             </div>
           </AnimatedSection>
         </div>
@@ -438,18 +430,14 @@ export default function BrandPage() {
                 options={{ delay: 300 }}
                 className="relative"
               >
-                <div className="rounded-xl overflow-hidden shadow-2xl">
+                <div className="rounded-xl overflow-hidden shadow-lg">
                   <Image
-                    src="/file.svg"
+                    src="/icons/brand-dashboard-icon.svg"
                     alt="Brand Analytics Dashboard"
                     width={800}
                     height={500}
                     className="w-full h-auto"
                   />
-                </div>
-                <div className="absolute -bottom-6 -right-6 bg-blue-600 text-white p-4 rounded-lg shadow-lg">
-                  <div className="text-2xl font-bold">+62%</div>
-                  <div className="text-sm">Average ROI</div>
                 </div>
               </AnimatedSection>
             </div>
@@ -482,15 +470,15 @@ export default function BrandPage() {
                 <div className={index % 2 === 1 ? "md:order-2" : ""}>
                   <AnimatedSection
                     animation={index % 2 === 0 ? "slide-right" : "slide-left"}
-                    className="relative h-96 rounded-xl overflow-hidden shadow-xl"
+                    className="relative h-96 rounded-xl overflow-hidden"
                   >
                     <Image
                       src={benefit.image}
                       alt={benefit.title}
                       fill
-                      className="object-cover"
+                      className="w-fit h-fit object-contain"
                     />
-                    <div className="absolute inset-0 bg-gradient-to-tr from-blue-600/40 to-transparent"></div>
+                    {/* <div className="absolute inset-0 bg-gradient-to-tr from-blue-600/40 to-transparent"></div> */}
                   </AnimatedSection>
                 </div>
 

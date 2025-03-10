@@ -1,0 +1,80 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200">
+  <!-- Background Circle -->
+  <circle cx="100" cy="100" r="80" fill="#faf5ff" />
+  
+  <!-- Brand Element (Building/Rising) -->
+  <g transform="translate(100, 100)">
+    <!-- Brand/Building Base -->
+    <rect x="-40" y="0" width="80" height="40" rx="4" ry="4" fill="#c084fc" stroke="#7e22ce" stroke-width="2" />
+    
+    <!-- Brand Logo Placeholder -->
+    <rect x="-25" y="10" width="50" height="20" rx="3" ry="3" fill="#faf5ff" />
+    <text x="0" y="25" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="#7e22ce">BRAND</text>
+    
+    <!-- Expansion/Growth Elements -->
+    <path d="M-55,-10 L-40,0" stroke="#7e22ce" stroke-width="2" stroke-linecap="round" />
+    <path d="M40,0 L55,-10" stroke="#7e22ce" stroke-width="2" stroke-linecap="round" />
+    
+    <!-- Upward Growth Arrows -->
+    <path d="M0,0 L0,-40 M-7,-33 L0,-40 L7,-33" fill="none" stroke="#7e22ce" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" />
+    
+    <!-- Awareness Waves (Ripple Effect) -->
+    <circle cx="0" cy="-20" r="15" fill="none" stroke="#9333ea" stroke-width="2" stroke-dasharray="2 2" />
+    <circle cx="0" cy="-20" r="30" fill="none" stroke="#9333ea" stroke-width="2" stroke-dasharray="3 3" />
+    <circle cx="0" cy="-20" r="45" fill="none" stroke="#9333ea" stroke-width="2" stroke-dasharray="4 4" />
+  </g>
+  
+  <!-- Influencer Elements -->
+  <g transform="translate(70, 50)">
+    <!-- Influencer Icon -->
+    <circle cx="0" cy="0" r="12" fill="#ddd6fe" stroke="#7e22ce" stroke-width="1.5" />
+    <circle cx="0" cy="-5" r="5" fill="#7e22ce" />
+    <path d="M-6,5 C-6,12 6,12 6,5" fill="none" stroke="#7e22ce" stroke-width="1.5" />
+    
+    <!-- Connection to Brand -->
+    <path d="M0,15 L25,40" fill="none" stroke="#9333ea" stroke-width="1.5" stroke-dasharray="3 2" />
+    <circle cx="14" cy="28" r="3" fill="#a855f7" />
+  </g>
+  
+  <g transform="translate(130, 50)">
+    <!-- Influencer Icon -->
+    <circle cx="0" cy="0" r="12" fill="#ddd6fe" stroke="#7e22ce" stroke-width="1.5" />
+    <circle cx="0" cy="-5" r="5" fill="#7e22ce" />
+    <path d="M-6,5 C-6,12 6,12 6,5" fill="none" stroke="#7e22ce" stroke-width="1.5" />
+    
+    <!-- Connection to Brand -->
+    <path d="M0,15 L-25,40" fill="none" stroke="#9333ea" stroke-width="1.5" stroke-dasharray="3 2" />
+    <circle cx="-14" cy="28" r="3" fill="#a855f7" />
+  </g>
+  
+  <!-- Target Audience Icons -->
+  <g transform="translate(50, 120)">
+    <!-- Audience Group -->
+    <circle cx="-8" cy="0" r="6" fill="#ddd6fe" />
+    <circle cx="0" cy="0" r="6" fill="#ddd6fe" />
+    <circle cx="8" cy="0" r="6" fill="#ddd6fe" />
+    
+    <!-- Heart/Connection -->
+    <path d="M0,-10 L0,-15" fill="none" stroke="#9333ea" stroke-width="1.5" />
+    <path d="M0,-15 C0,-25 -15,-25 -15,-15 C-15,-5 0,-10 0,-10 C0,-10 15,-5 15,-15 C15,-25 0,-25 0,-15" fill="#d8b4fe" stroke="#9333ea" stroke-width="1" />
+  </g>
+  
+  <g transform="translate(150, 120)">
+    <!-- Audience Group -->
+    <circle cx="-8" cy="0" r="6" fill="#ddd6fe" />
+    <circle cx="0" cy="0" r="6" fill="#ddd6fe" />
+    <circle cx="8" cy="0" r="6" fill="#ddd6fe" />
+    
+    <!-- Heart/Connection -->
+    <path d="M0,-10 L0,-15" fill="none" stroke="#9333ea" stroke-width="1.5" />
+    <path d="M0,-15 C0,-25 -15,-25 -15,-15 C-15,-5 0,-10 0,-10 C0,-10 15,-5 15,-15 C15,-25 0,-25 0,-15" fill="#d8b4fe" stroke="#9333ea" stroke-width="1" />
+  </g>
+  
+  <!-- Authentic Partnership Symbol -->
+  <g transform="translate(100, 30)">
+    <circle cx="0" cy="0" r="15" fill="#faf5ff" stroke="#7e22ce" stroke-width="1.5" />
+    <!-- Handshake Symbol -->
+    <path d="M-10,0 C-7,-3 -4,-3 -1,0 C2,-3 5,-3 8,0" fill="none" stroke="#7e22ce" stroke-width="1.5" stroke-linecap="round" />
+    <path d="M-8,3 L8,3" stroke="#7e22ce" stroke-width="1.5" stroke-linecap="round" />
+  </g>
+</svg>

@@ -1,0 +1,150 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200">
+  <!-- Background Circle with Gradient -->
+  <defs>
+    <radialGradient id="bgGradient" cx="50%" cy="50%" r="80%" fx="50%" fy="50%">
+      <stop offset="0%" stop-color="#f0f9ff" />
+      <stop offset="100%" stop-color="#e0f2fe" />
+    </radialGradient>
+    <linearGradient id="shieldGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#dbeafe" />
+      <stop offset="100%" stop-color="#93c5fd" />
+    </linearGradient>
+    <filter id="dropShadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur in="SourceAlpha" stdDeviation="3" />
+      <feOffset dx="0" dy="2" result="offsetblur" />
+      <feComponentTransfer>
+        <feFuncA type="linear" slope="0.2" />
+      </feComponentTransfer>
+      <feMerge>
+        <feMergeNode />
+        <feMergeNode in="SourceGraphic" />
+      </feMerge>
+    </filter>
+  </defs>
+  
+  <circle cx="100" cy="100" r="85" fill="url(#bgGradient)" />
+  
+  <!-- Shield Base (Trust Symbol) with 3D Effect -->
+  <path d="M100,35 L145,53 C145,53 145,103 145,125 C145,147 100,170 100,170 C100,170 55,147 55,125 C55,103 55,53 55,53 Z" fill="white" stroke="#0369a1" stroke-width="2.5" filter="url(#dropShadow)" />
+  
+  <!-- Shield Inner Gradient -->
+  <path d="M100,42 L137,58 C137,58 137,102 137,122 C137,142 100,162 100,162 C100,162 63,142 63,122 C63,102 63,58 63,58 Z" fill="url(#shieldGradient)" stroke="#0369a1" stroke-width="0.5" />
+  
+  <!-- Checkmark in Shield (Verified/Trust) -->
+  <path d="M85,105 L95,118 L118,82" fill="none" stroke="#0369a1" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" />
+  
+  <!-- Influencer Connection with Glow Effect -->
+  <g transform="translate(65, 60)">
+    <!-- Glow Effect -->
+    <circle cx="0" cy="0" r="18" fill="#7dd3fc" opacity="0.3" />
+    
+    <!-- Influencer Circle -->
+    <circle cx="0" cy="0" r="15" fill="#bae6fd" stroke="#0284c7" stroke-width="1.5" />
+    
+    <!-- Person Icon -->
+    <circle cx="0" cy="-4" r="5" fill="#0284c7" />
+    <path d="M-7,8 C-7,15 7,15 7,8" fill="none" stroke="#0284c7" stroke-width="2" />
+    
+    <!-- Verified Badge -->
+    <circle cx="10" cy="-8" r="5" fill="#0ea5e9" />
+    <path d="M7,-8 L9,-6 L13,-10" fill="none" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+  </g>
+  
+  <!-- Brand Connection with Glow Effect -->
+  <g transform="translate(135, 60)">
+    <!-- Glow Effect -->
+    <circle cx="0" cy="0" r="18" fill="#7dd3fc" opacity="0.3" />
+    
+    <!-- Brand Circle -->
+    <circle cx="0" cy="0" r="15" fill="#bae6fd" stroke="#0284c7" stroke-width="1.5" />
+    
+    <!-- Brand "B" -->
+    <path d="M-4,-7 L2,-7 C6,-7 8,-4 8,-1 C8,2 6,3 2,3 L-4,3 L-4,-7 Z" fill="none" stroke="#0284c7" stroke-width="2.5" stroke-linejoin="round" />
+    <path d="M-4,3 L2,3 C7,3 9,6 9,9 C9,12 7,14 2,14 L-4,14 L-4,3 Z" fill="none" stroke="#0284c7" stroke-width="2.5" stroke-linejoin="round" />
+  </g>
+  
+  <!-- Connection Between Influencer and Brand - Enhanced -->
+  <path d="M83,60 L117,60" stroke="#0284c7" stroke-width="3" stroke-linecap="round" stroke-dasharray="4,2" />
+  
+  <!-- Audience Members Simple -->
+  <g transform="translate(45, 110)">
+    <!-- Audience Circle with Glow -->
+    <circle cx="0" cy="0" r="12" fill="#7dd3fc" opacity="0.3" />
+    <circle cx="0" cy="0" r="10" fill="#bae6fd" stroke="#0284c7" stroke-width="1" />
+    
+    <!-- Person Icon -->
+    <circle cx="0" cy="-3" r="3" fill="#0284c7" />
+    <path d="M-4,5 C-4,9 4,9 4,5" fill="none" stroke="#0284c7" stroke-width="1.5" />
+  </g>
+  
+  <g transform="translate(40, 140)">
+    <!-- Audience Circle with Glow -->
+    <circle cx="0" cy="0" r="12" fill="#7dd3fc" opacity="0.3" />
+    <circle cx="0" cy="0" r="10" fill="#bae6fd" stroke="#0284c7" stroke-width="1" />
+    
+    <!-- Person Icon -->
+    <circle cx="0" cy="-3" r="3" fill="#0284c7" />
+    <path d="M-4,5 C-4,9 4,9 4,5" fill="none" stroke="#0284c7" stroke-width="1.5" />
+  </g>
+  
+  <g transform="translate(155, 110)">
+    <!-- Audience Circle with Glow -->
+    <circle cx="0" cy="0" r="12" fill="#7dd3fc" opacity="0.3" />
+    <circle cx="0" cy="0" r="10" fill="#bae6fd" stroke="#0284c7" stroke-width="1" />
+    
+    <!-- Person Icon -->
+    <circle cx="0" cy="-3" r="3" fill="#0284c7" />
+    <path d="M-4,5 C-4,9 4,9 4,5" fill="none" stroke="#0284c7" stroke-width="1.5" />
+  </g>
+  
+  <g transform="translate(160, 140)">
+    <!-- Audience Circle with Glow -->
+    <circle cx="0" cy="0" r="12" fill="#7dd3fc" opacity="0.3" />
+    <circle cx="0" cy="0" r="10" fill="#bae6fd" stroke="#0284c7" stroke-width="1" />
+    
+    <!-- Person Icon -->
+    <circle cx="0" cy="-3" r="3" fill="#0284c7" />
+    <path d="M-4,5 C-4,9 4,9 4,5" fill="none" stroke="#0284c7" stroke-width="1.5" />
+  </g>
+  
+  <!-- Star Ratings (Credibility) - Enhanced -->
+  <g transform="translate(100, 25)">
+    <!-- 5-Star Rating with Better Design -->
+    <g transform="translate(-48, 0) scale(0.9)">
+      <path d="M0,-10 L2,-3 L10,-3 L3,1 L5,8 L0,4 L-5,8 L-3,1 L-10,-3 L-2,-3 Z" fill="#fbbf24" stroke="#f59e0b" stroke-width="0.5" />
+    </g>
+    <g transform="translate(-24, 0) scale(0.9)">
+      <path d="M0,-10 L2,-3 L10,-3 L3,1 L5,8 L0,4 L-5,8 L-3,1 L-10,-3 L-2,-3 Z" fill="#fbbf24" stroke="#f59e0b" stroke-width="0.5" />
+    </g>
+    <g transform="translate(0, 0) scale(0.9)">
+      <path d="M0,-10 L2,-3 L10,-3 L3,1 L5,8 L0,4 L-5,8 L-3,1 L-10,-3 L-2,-3 Z" fill="#fbbf24" stroke="#f59e0b" stroke-width="0.5" />
+    </g>
+    <g transform="translate(24, 0) scale(0.9)">
+      <path d="M0,-10 L2,-3 L10,-3 L3,1 L5,8 L0,4 L-5,8 L-3,1 L-10,-3 L-2,-3 Z" fill="#fbbf24" stroke="#f59e0b" stroke-width="0.5" />
+    </g>
+    <g transform="translate(48, 0) scale(0.9)">
+      <path d="M0,-10 L2,-3 L10,-3 L3,1 L5,8 L0,4 L-5,8 L-3,1 L-10,-3 L-2,-3 Z" fill="#fbbf24" stroke="#f59e0b" stroke-width="0.5" />
+    </g>
+  </g>
+  
+  <!-- Testimonial/Comment Bubbles -->
+  <g transform="translate(40, 165)">
+    <path d="M0,0 L8,6 L15,0 L15,-10 L0,-10 Z" fill="#93c5fd" stroke="#0284c7" stroke-width="1" />
+    <circle cx="5" cy="-5" r="1.5" fill="#0284c7" />
+    <circle cx="10" cy="-5" r="1.5" fill="#0284c7" />
+  </g>
+  
+  <g transform="translate(160, 165)">
+    <path d="M0,0 L-8,6 L-15,0 L-15,-10 L0,-10 Z" fill="#93c5fd" stroke="#0284c7" stroke-width="1" />
+    <circle cx="-5" cy="-5" r="1.5" fill="#0284c7" />
+    <circle cx="-10" cy="-5" r="1.5" fill="#0284c7" />
+  </g>
+  
+  <!-- Handshake (Trust Transfer) - Enhanced 3D Effect -->
+  <g transform="translate(100, 175)">
+    <ellipse cx="0" cy="5" rx="30" ry="3" fill="#0284c7" opacity="0.2" />
+    <path d="M-20,-5 C-15,-10 -10,-10 -5,-5 C0,-10 5,-10 10,-5 C15,-10 20,-10 25,-5" fill="none" stroke="#0369a1" stroke-width="3" stroke-linecap="round" />
+    <circle cx="-5" cy="-5" r="2" fill="#0284c7" />
+    <circle cx="10" cy="-5" r="2" fill="#0284c7" />
+  </g>
+</svg>

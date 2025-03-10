@@ -238,11 +238,11 @@ export const BrandFeaturesSection = () => {
           <AnimatedSection
             animation="fade"
             options={{ delay: 500 }}
-            className="block md:hidden"
+            className="mt-10 block md:hidden"
           >
             <Link
               href="/brand"
-              className="mt-6 text-blue-600 font-medium hover:text-blue-800 hover:underline"
+              className="text-blue-600 font-medium hover:text-blue-800 hover:underline"
             >
               Learn more about brand features →
             </Link>
@@ -257,10 +257,10 @@ export const BrandManagementSection = () => {
   return (
     <ParallaxSection speed={0.2} className="py-20">
       <div className="container relative z-10 bg-white/90 rounded-2xl p-12 shadow-xl">
-        <div className="grid realtgrid-cols-1 md:grid-cols-12 items-center">
+        <div className="grid grid-cols-1 md:grid-cols-12 items-center">
           <AnimatedSection
             animation="slide-left"
-            className="order-1 col-span-5 rounded-lg mt-0"
+            className="order-1 col-span-5 items-center rounded-lg mt-0"
           >
             <BrandManagementMedia />
             {/* <div className="absolute inset-0 bg-gradient-to-bl from-purple-600/40 to-transparent"></div> */}
@@ -268,7 +268,7 @@ export const BrandManagementSection = () => {
           <div className="order-2 realtive col-span-2">
             {/*floating cards*/}
           </div>
-          <div className="order-3 col-span-5">
+          <div className="order-3 col-span-5 pt-5">
             <AnimatedSection animation="fade">
               <span className="text-blue-600 font-medium">For Influencers</span>
               <h2 className="text-3xl font-bold mt-2 mb-6">
