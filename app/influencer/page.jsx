@@ -242,7 +242,7 @@ export default function InfluencerPage() {
             src="/header/influencer-header.png"
             alt="Influencer creating content"
             fill
-            className="object-contains"
+            className="object-contain md:object-cover"
             priority
           />
           <div className="absolute inset-0 bg-gradient-to-r from-blue-900/90 to-indigo-900/80"></div>
