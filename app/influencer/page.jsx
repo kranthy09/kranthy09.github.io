@@ -282,6 +282,15 @@ export default function InfluencerPage() {
               </Link>
             </div>
           </AnimatedSection>
+          <AnimatedSection
+            animation="fade"
+            options={{ delay: 600 }}
+            className="mt-16"
+          >
+            <div className="flex justify-center">
+              <div className="flex space-x-8 items-center md:h-20"></div>
+            </div>
+          </AnimatedSection>
         </div>
 
         <div className="absolute bottom-0 left-0 right-0">
