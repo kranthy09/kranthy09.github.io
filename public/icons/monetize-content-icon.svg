@@ -1,0 +1,58 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200">
+  <!-- Background Circle -->
+  <circle cx="100" cy="100" r="80" fill="#ecfdf5" />
+  
+  <!-- Content Creation Elements -->
+  <g transform="translate(100, 90)">
+    <!-- Document/Content Base -->
+    <rect x="-35" y="-40" width="70" height="80" rx="4" ry="4" fill="white" stroke="#059669" stroke-width="2" />
+    
+    <!-- Content Elements -->
+    <rect x="-25" y="-30" width="50" height="6" rx="2" ry="2" fill="#10b981" />
+    <rect x="-25" y="-20" width="35" height="6" rx="2" ry="2" fill="#10b981" />
+    <rect x="-25" y="-10" width="45" height="6" rx="2" ry="2" fill="#10b981" />
+    
+    <!-- Image/Video Area -->
+    <rect x="-25" y="0" width="50" height="30" rx="2" ry="2" fill="#d1fae5" stroke="#059669" stroke-width="1" />
+    <path d="M-5,15 L5,15 L10,5 L15,20 L20,10" fill="none" stroke="#059669" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+    <circle cx="-15" cy="10" r="5" fill="#34d399" />
+  </g>
+  
+  <!-- Monetization Elements -->
+  <g transform="translate(100, 110)">
+    <!-- Coin Stack -->
+    <g transform="translate(35, 15)">
+      <circle cx="0" cy="0" r="12" fill="#fef3c7" stroke="#f59e0b" stroke-width="1.5" />
+      <circle cx="0" cy="-3" r="12" fill="#fef3c7" stroke="#f59e0b" stroke-width="1.5" />
+      <circle cx="0" cy="-6" r="12" fill="#fef3c7" stroke="#f59e0b" stroke-width="1.5" />
+      <text x="0" y="3" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#d97706">$</text>
+    </g>
+    
+    <!-- Growth Chart -->
+    <g transform="translate(-35, 30) scale(0.8)">
+      <path d="M-15,0 L0,0 L0,-15 L15,-15 L15,-30" fill="none" stroke="#059669" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" />
+      <path d="M-15,0 L15,-30" fill="none" stroke="#059669" stroke-width="1" stroke-dasharray="2 1" />
+      <circle cx="15" cy="-30" r="4" fill="#10b981" />
+    </g>
+  </g>
+  
+  <!-- Connection Between Content and Money -->
+  <path d="M130,100 C 140,100 140,100 150,115" fill="none" stroke="#059669" stroke-width="2" stroke-dasharray="4 2" />
+  
+  <!-- Heart/Like Icon (Engagement) -->
+  <g transform="translate(75, 65) scale(0.6)">
+    <path d="M0,10 L-15,-5 C-20,-10 -20,-20 -15,-25 C-10,-30 0,-30 0,-20 C0,-30 10,-30 15,-25 C20,-20 20,-10 15,-5 Z" fill="#ef4444" />
+  </g>
+  
+  <!-- Comment Icon (Engagement) -->
+  <g transform="translate(60, 85) scale(0.5)">
+    <path d="M-15,-15 L15,-15 L15,5 L5,5 L0,15 L0,5 L-15,5 Z" fill="#3b82f6" stroke="#2563eb" stroke-width="2" />
+    <line x1="-8" y1="-8" x2="8" y2="-8" stroke="#2563eb" stroke-width="2" />
+    <line x1="-8" y1="-2" x2="8" y2="-2" stroke="#2563eb" stroke-width="2" />
+  </g>
+  
+  <!-- Star Icon (Rating) -->
+  <g transform="translate(70, 45) scale(0.5)">
+    <path d="M0,-20 L5,-5 L20,-5 L10,5 L15,20 L0,10 L-15,20 L-10,5 L-20,-5 L-5,-5 Z" fill="#fbbf24" />
+  </g>
+</svg>

@@ -42,7 +42,7 @@ const Footer = () => {
           </div>
 
           {/* Insights Section */}
-          <div className="flex flex-col space-y-6">
+          <div className="flex flex-col space-y-6 px-10">
             <h2 className="text-2xl  border-indigo-400">Insights</h2>
             <ul className="space-y-3">
               {insights.map((item, index) => (

@@ -13,6 +13,7 @@ import NetworkingComponent from "@/app/components/dashboardOverview/influencer/N
 import EngagementComponent from "@/app/components/dashboardOverview/influencer/EngagementComponent";
 import ImageCarousel from "@/app/components/ImageCarousel";
 import EnhancedImageCarousel from "@/app/components/EnhancedImageCarousel";
+import ContentCalendar from "../components/dashboardOverview/influencer/ContentCalenderComponent";
 
 export default function DashboardOverviewPage() {
   const carouselImages = [
@@ -81,7 +82,7 @@ export default function DashboardOverviewPage() {
         <InfluencerFeatures />
       </div> */}
       {/* <InfluencerNetworkingPlatform /> */}
-      <div className="relative">
+      {/* <div className="relative">
         <NetworkingComponent />
         <div className="absolute right-0 top-0">
           <EngagementComponent />
@@ -134,6 +135,12 @@ export default function DashboardOverviewPage() {
             height={400}
           />
         </div>
+      </div> */}
+      <div className="flex">
+        <div className="flex-col-1">
+          <ContentCalendar />
+        </div>
+        <div className="flex-col-1"></div>
       </div>
     </>
   );
