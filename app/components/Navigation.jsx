@@ -141,7 +141,7 @@ const Navigation = () => {
 
             <Link
               href="/signin"
-              className="block w-full text-center py-3 my-2 rounded bg-secondary text-white font-medium"
+              className="btn-primary btn-md rounded-3xl"
               onClick={closeMenu}
             >
               Sign In
