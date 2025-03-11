@@ -71,10 +71,7 @@ const Navigation = () => {
             <NavItem href="/about" label="About" />
             <NavItem href="/contact" label="Contact" />
 
-            <Link
-              href="/signin"
-              className="btn-primary rounded-3xl bg-secondary"
-            >
+            <Link href="/signin" className="btn-primary btn-md rounded-3xl">
               Sign In
             </Link>
           </div>

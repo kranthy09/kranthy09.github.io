@@ -7,10 +7,10 @@ import {
   BrandFeaturesSection,
   MediaGallerySection,
   AboutSection,
-  ContactSection,
   WhyInfluenceAISection,
   BrandManagementSection,
 } from '@/app/components/HomePage';
+import GetInTouch from "./components/GetInTouchComponent";
 import StatisticsSection from '@/app/components/StatisticsSection';
 import TestimonialCarousel from '@/app/components/Testimonial';
 import ScrollProgressIndicator from '@/app/components/ScrollProgress';
@@ -32,7 +32,7 @@ export default function Home() {
       <CaseStudiesSection />
       <MediaGallerySection />
       <AboutSection />
-      <ContactSection />
+      <GetInTouch />
 
     </>
   );

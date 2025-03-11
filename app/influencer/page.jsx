@@ -392,7 +392,7 @@ export default function InfluencerPage() {
             >
               <div className="rounded-xl overflow-hidden">
                 <div className="flex relative">
-                  <div className="flex-1  shadow-2xl">
+                  <div className="flex-1 shadow-2xl">
                     <ContentCalendar />
                   </div>
                   <div className="absolute right-0 top-0">

@@ -14,6 +14,7 @@ import EngagementComponent from "@/app/components/dashboardOverview/influencer/E
 import ImageCarousel from "@/app/components/ImageCarousel";
 import EnhancedImageCarousel from "@/app/components/EnhancedImageCarousel";
 import ContentCalendar from "../components/dashboardOverview/influencer/ContentCalenderComponent";
+import GetInTouch from "../components/GetInTouchComponent";
 
 export default function DashboardOverviewPage() {
   const carouselImages = [
@@ -142,6 +143,7 @@ export default function DashboardOverviewPage() {
         </div>
         <div className="flex-col-1"></div>
       </div>
+      <GetInTouch />
     </>
   );
 }

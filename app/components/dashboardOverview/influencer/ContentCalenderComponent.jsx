@@ -26,7 +26,7 @@ const ContentCalendar = () => {
     {
       id: 2,
       title: "Social Media Campaign: Product Launch",
-      date: new Date(2025, 2, 18),
+      date: new Date(2025, 2, 16),
       type: "Social Media",
       status: "Planning",
       assignee: "Miguel Rodriguez",
@@ -46,6 +46,38 @@ const ContentCalendar = () => {
       type: "Video",
       status: "Review",
       assignee: "David Kim",
+    },
+    {
+      id: 5,
+      title: "Social Media Campaign: Product Launch",
+      date: new Date(2025, 2, 2),
+      type: "Social Media",
+      status: "Planning",
+      assignee: "Miguel Rodriguez",
+    },
+    {
+      id: 6,
+      title: "Social Media Campaign: Product Launch",
+      date: new Date(2025, 2, 5),
+      type: "Social Media",
+      status: "Review",
+      assignee: "Miguel Rodriguez",
+    },
+    {
+      id: 7,
+      title: "Email Newsletter: March Edition",
+      date: new Date(2025, 2, 8),
+      type: "Email",
+      status: "Not Started",
+      assignee: "Priya Patel",
+    },
+    {
+      id: 8,
+      title: "Post Media Campaign: Product Launch",
+      date: new Date(2025, 2, 18),
+      type: "Social Media",
+      status: "Planning",
+      assignee: "Miguel Rodriguez",
     },
   ];
 
@@ -154,8 +186,8 @@ const ContentCalendar = () => {
   return (
     <div className="flex items-center justify-center p-6">
       <div className="bg-white rounded-xl shadow-xl overflow-hidden w-full max-w-3xl border border-gray-100">
-        <div className="bg-gradient-to-r from-indigo-600 to-purple-600 p-4">
-          <div className="flex items-center justify-between mb-2">
+        <div className="bg-gradient-to-r from-indigo-600 to-purple-600 p-4 hidden md:block">
+          <div className="flex items-center justify-between mb-2 ">
             <h2 className="text-xl font-bold text-white flex items-center">
               <Calendar size={20} className="mr-2 text-white opacity-90" />
               {currentMonth.toLocaleDateString("en-US", {
@@ -284,7 +316,7 @@ const ContentCalendar = () => {
         </div>
 
         {selectedDate && (
-          <div className="border-t border-gray-100 bg-gray-50 p-4">
+          <div className="border-t border-gray-100 bg-gray-50 p-4 hidden">
             <h3 className="text-md font-semibold text-gray-800 mb-3">
               {formatDate(selectedDate)}
             </h3>
